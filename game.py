@@ -31,7 +31,9 @@ class Game:
 
         self.state = GameState.MENU
         self.score = 0
-    
+
+        self.text_box = None
+        self.text = str(self.score)
 
     def player_physic(self) :
         if(self.state == GameState.RUN) :
@@ -79,6 +81,8 @@ class Game:
             for j in lst_delete :
                 del(self.pipe[j])
                 self.score += 1
+                self.text = str(self.score)
+                self.generate_text_score()
                 print(self.score)
             self.root.after(FPS, self.pipes_move)
 
@@ -99,6 +103,9 @@ class Game:
 
             self.root.after(FPS, self.check_game_collisions)
 
+    def generate_text_score(self) :
+        self.canvas.delete(self.text_box)
+        self.text_box = self.canvas.create_text(WIDTH//2, 35, text=self.text, font=("Ariel", 40, "normal"))
 
 
 
@@ -108,6 +115,8 @@ class Game:
         self.state = GameState.RUN
 
         if(self.state == GameState.RUN) :
+            self.generate_text_score()
+
             self.player.set_position(x=100)
 
             self.player_physic()
