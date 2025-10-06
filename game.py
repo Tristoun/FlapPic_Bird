@@ -61,7 +61,7 @@ class Game:
             
             if(self.pipe == []) : 
                 self.pipe.append(Pipe(self.canvas, WIDTH, pos_y))
-            elif(self.pipe[-1].x <= WIDTH - 400) :
+            elif(self.pipe[-1].x <= WIDTH - 600) :
                 self.pipe.append(Pipe(self.canvas, WIDTH, pos_y))
 
             self.root.after(FPS, self.generate_pipes)
