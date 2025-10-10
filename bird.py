@@ -6,7 +6,7 @@ class BirdState(Enum) :
     JUMP = 1
 
 class Bird:
-    def __init__(self, canvas, x : int=50, y : int =50, path : str ="src/images/animation/bird_wingsup.png", size : tuple =(60, 48)) :
+    def __init__(self, canvas, x : int=50, y : int =50, path : str ="images/animation/bird_wingsup.png", size : tuple =(60, 48)) :
         self.canvas = canvas
         self.x = x
         self.y = y
@@ -21,7 +21,7 @@ class Bird:
         self.frame_anim = 0
 
         # img_anim_path = "src/images/animation/bird_wingsdown.png"
-        img_anim_path = "src/images/images/dog_jump.png"
+        img_anim_path = "images/images/dog_jump.png"
 
         img_anim_photo = Image.open(img_anim_path).convert("RGBA")
         img_anim_photo = img_anim_photo.resize((self.width, self.height), Image.Resampling.LANCZOS)

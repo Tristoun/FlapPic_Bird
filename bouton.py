@@ -1,7 +1,7 @@
 from PIL import Image, ImageTk
 
 class Bouton:
-    def __init__(self, canvas, path="src/images/images/start.png", size=(80, 28), x=0, y=0):
+    def __init__(self, canvas, path="images/images/start.png", size=(80, 28), x=0, y=0):
         """
         canvas: Tkinter Canvas where the background will be drawn
         path: path to background image

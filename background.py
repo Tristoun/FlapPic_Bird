@@ -1,7 +1,7 @@
 from PIL import Image, ImageTk
 
 class Background:
-    def __init__(self, canvas, path="src/images/images/bg.png", size=(1600, 900), x=0, y=0):
+    def __init__(self, canvas, path="images/images/bg.png", size=(1600, 900), x=0, y=0):
         """
         canvas: Tkinter Canvas where the background will be drawn
         path: path to background image

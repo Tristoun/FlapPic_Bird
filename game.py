@@ -20,10 +20,10 @@ HEIGHT = 900
 pygame.mixer.init()
 
 def playNotificationSound():
-    pygame.mixer.music.load('src/sound/megalovania.mp3')
+    pygame.mixer.music.load('sound/megalovania.mp3')
     pygame.mixer.music.play()
 
-# playNotificationSound()
+playNotificationSound()
 
 
 class GameState(Enum) :
@@ -38,9 +38,9 @@ class Game:
         self.canvas.pack()
 
         # Player/bird
-        self.bg = Background(self.canvas, path="src/images/images/bg_undertale.jpg", size=(WIDTH, HEIGHT))
+        self.bg = Background(self.canvas, path="images/images/bg_undertale.jpg", size=(WIDTH, HEIGHT))
 
-        self.player = Bird(self.canvas, path="src/images/images/dog.png")
+        self.player = Bird(self.canvas, path="images/images/dog.png")
         self.pipe = []
 
         self.state = GameState.MENU
@@ -53,9 +53,9 @@ class Game:
 
         self.speed = 1
 
-        top_img = Image.open("src/images/images/os_top.png").resize((87,600), Image.Resampling.LANCZOS)
+        top_img = Image.open("images/images/os_top.png").resize((87,600), Image.Resampling.LANCZOS)
         self.top_photo = ImageTk.PhotoImage(top_img)
-        bottom_img = Image.open("src/images/images/os_bot.png").resize((87,600), Image.Resampling.LANCZOS)
+        bottom_img = Image.open("images/images/os_bot.png").resize((87,600), Image.Resampling.LANCZOS)
         self.bottom_photo = ImageTk.PhotoImage(bottom_img)
 
         self.cadre = None
@@ -94,14 +94,14 @@ class Game:
             self.text = "0"
             self.text_box = None
             self.reset()
-            self.player = Bird(self.canvas, path="src/images/images/dog.png", size=(60,55))
+            self.player = Bird(self.canvas, path="images/images/dog.png", size=(60,55))
 
             self.root.bind("<Button>", self.click_menu)
 
     def scoring(self) :
         self.reset()
-        self.cadre = Bouton(self.canvas, size=(550, 500),path="src/images/images/carre.png", x=80, y=80)
-        self.text_score = Bouton(self.canvas, size=(220, 44), path="src/images/images/text_score.png", x=200, y=200)
+        self.cadre = Bouton(self.canvas, size=(550, 500),path="images/images/carre.png", x=80, y=80)
+        self.text_score = Bouton(self.canvas, size=(220, 44), path="images/images/text_score.png", x=200, y=200)
         self.generate_text_score(x=450, y=220)
         self.bouton_start = Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2-14)
         self.state = GameState.MENU
@@ -200,7 +200,7 @@ class Game:
                 self.state = GameState.RUN
                 self.canvas.delete(self.bouton_start.id)
                 self.root.bind("<space>", lambda event : self.player_jump())
-                self.player = Bird(self.canvas, path="src/images/images/dog.png", size=(60,55))
+                self.player = Bird(self.canvas, path="images/images/dog.png", size=(60,55))
                 self.score = 0
                 # self.text_box = None
                 self.text = str(self.score)
