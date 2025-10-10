@@ -201,13 +201,14 @@ class Game:
                 self.canvas.delete(self.bouton_start.id)
                 self.root.bind("<space>", lambda event : self.player_jump())
                 self.player = Bird(self.canvas, path="src/images/images/dog.png", size=(60,55))
-
+                self.score = 0
+                # self.text_box = None
+                self.text = str(self.score)
                 if(self.cadre!= None) :
                     self.canvas.delete(self.cadre.id)
                 if(self.text_score!= None) :
-
                     self.canvas.delete(self.text_score.id)
-
+                self.canvas.delete(self.text_box)
                 self.launch_game()
 
 
