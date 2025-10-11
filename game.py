@@ -36,7 +36,6 @@ class Game:
         self.root = root
         self.canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT)
         self.canvas.pack()
-        self.root.focus_set() 
 
         self.root.bind("<KeyPress-space>", self.player_jump)
 

@@ -29,8 +29,8 @@ class Bird:
         self.anim_state = 0  # 0 for photo, 1 for anim
 
         self.image = self.canvas.create_image(self.x, self.y, image=self.photo, anchor="nw")
-        self.velocity = 0       # New: vertical speed
-        self.gravity_force = 1  # How fast gravity accelerates
+        self.velocity = 0     
+        self.gravity_force = 1  
         self.jump_strength = -15 # Negative because up is decreasing y
         self.anim_state = 0
         self.frame_anim = 0
@@ -47,14 +47,15 @@ class Bird:
 
     def _update_image_animation(self):
         self.frame_anim += 1
-        if self.frame_anim >= 8:
-            self.frame_anim = 0
+        if self.frame_anim >= 5:
             if self.anim_state == 0:
                 self.canvas.itemconfig(self.image, image=self.anim)
                 self.anim_state = 1
+                self.frame_anim = 0
             else:
                 self.canvas.itemconfig(self.image, image=self.photo)
                 self.anim_state = 0
+                self.frame_anim = 0
 
     def check_collision(self, height=600):
         return self.y + self.height > height or self.y <= 0
