@@ -121,14 +121,7 @@ class Game:
             if self.player.velocity > 0:
                 self.player.state = BirdState.FALL
         
-    def jump_step(self):
-        self.player.jump(speed=17)
-        self.frame_jump += 1
-        if(self.frame_jump == 10):
-            self.frame_jump = 0
-            self.player.state = BirdState.FALL
-        else:
-            self.root.after(FPS, self.jump_step)
+    
 
     def player_jump(self, event):
         if self.state == GameState.RUN:

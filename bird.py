@@ -16,12 +16,26 @@ class Bird:
         # Load main image
         img = Image.open(path).convert("RGBA")
         img = img.resize((self.width, self.height), Image.Resampling.LANCZOS)
+
+        rotated_pil_img = img.rotate(30)
+        self.roup_down = ImageTk.PhotoImage(rotated_pil_img)
+        rotated_pil_img = img.rotate(-30)
+        self.rodown_down = ImageTk.PhotoImage(rotated_pil_img)
+
+
         self.photo = ImageTk.PhotoImage(img)
 
         # Load animation image
         img_anim_path = "images/images/dog_wingsup.png"
         img_anim = Image.open(img_anim_path).convert("RGBA")
         img_anim = img_anim.resize((self.width, self.height), Image.Resampling.LANCZOS)
+
+
+        rotated_pil_img = img_anim.rotate(30)
+        self.roup_up = ImageTk.PhotoImage(rotated_pil_img) #
+        rotated_pil_img = img_anim.rotate(-30)
+        self.rodown_up = ImageTk.PhotoImage(rotated_pil_img)
+
         self.anim = ImageTk.PhotoImage(img_anim)
 
         self.state = BirdState.FALL
@@ -29,7 +43,7 @@ class Bird:
         self.anim_state = 0  # 0 for photo, 1 for anim
 
         self.image = self.canvas.create_image(self.x, self.y, image=self.photo, anchor="nw")
-        self.velocity = 0     
+        self.velocity = 0       
         self.gravity_force = 1  
         self.jump_strength = -15 # Negative because up is decreasing y
         self.anim_state = 0
@@ -49,11 +63,20 @@ class Bird:
         self.frame_anim += 1
         if self.frame_anim >= 5:
             if self.anim_state == 0:
-                self.canvas.itemconfig(self.image, image=self.anim)
+
+                if(self.state == BirdState.FALL) :
+                    self.canvas.itemconfig(self.image, image=self.rodown_down)
+                else :
+                    self.canvas.itemconfig(self.image, image=self.roup_down)
+
                 self.anim_state = 1
                 self.frame_anim = 0
+
             else:
-                self.canvas.itemconfig(self.image, image=self.photo)
+                if(self.state == BirdState.FALL) :
+                    self.canvas.itemconfig(self.image, image=self.rodown_up)
+                else :
+                    self.canvas.itemconfig(self.image, image=self.roup_up)
                 self.anim_state = 0
                 self.frame_anim = 0
 
