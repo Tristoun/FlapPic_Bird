@@ -23,7 +23,7 @@ def playNotificationSound():
     pygame.mixer.music.load('sound/megalovania.mp3')
     pygame.mixer.music.play()
 
-playNotificationSound()
+# playNotificationSound()
 
 
 class GameState(Enum) :
@@ -36,11 +36,16 @@ class Game:
         self.root = root
         self.canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT)
         self.canvas.pack()
+        self.root.focus_set() 
+
+        self.root.bind("<KeyPress-space>", self.player_jump)
+
+        self.root.tk.call('tk', 'busy', 'hold', self.root)  # Not perfect, hacky
 
         # Player/bird
         self.bg = Background(self.canvas, path="images/images/bg_undertale.jpg", size=(WIDTH, HEIGHT))
 
-        self.player = Bird(self.canvas, path="images/images/dog.png")
+        self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png")
         self.pipe = []
 
         self.state = GameState.MENU
@@ -60,6 +65,8 @@ class Game:
 
         self.cadre = None
         self.text_score = None
+        self.space_pressed = False
+        self.frame_jump = 0
 
     def launch_game(self) :
         if(self.state == GameState.RUN) :
@@ -108,26 +115,28 @@ class Game:
         self.root.bind("<Button>", self.click_menu)
 
 
-    def player_physic(self) :
-        if(self.state == GameState.RUN) :
-            if(self.player.state == BirdState.FALL) :
-                self.player.gravity()
+    def player_physic(self):
+        if self.state == GameState.RUN:
+            self.player.apply_gravity()
+            # If velocity is negative (jump), bird is in jump state
+            if self.player.velocity > 0:
+                self.player.state = BirdState.FALL
         
-    def jump_step(self) :
-        self.player.jump()
-        self.player.frame_anim += 1
-        if(self.player.frame_anim == 10) :
-            self.player.frame_anim = 0
+    def jump_step(self):
+        self.player.jump(speed=17)
+        self.frame_jump += 1
+        if(self.frame_jump == 10):
+            self.frame_jump = 0
             self.player.state = BirdState.FALL
-        else :
+        else:
             self.root.after(FPS, self.jump_step)
 
+    def player_jump(self, event):
+        if self.state == GameState.RUN:
+            if(self.frame_jump >= 0) :
+                self.frame_jump = 0
+            self.player.jump()
 
-    def player_jump(self) :
-        if(self.state == GameState.RUN) :
-            if(self.player.state == BirdState.FALL) :
-                self.player.state = BirdState.JUMP
-                self.jump_step()
 
     def generate_pipes(self) :
         if(self.state == GameState.RUN) :
@@ -136,6 +145,7 @@ class Game:
             if(self.pipe == []) : 
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=pos_y))
             elif(self.pipe[-1].x <= WIDTH - 400) :
+
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=pos_y))
 
 
@@ -164,7 +174,7 @@ class Game:
     def death_animation(self):
         if(self.state == GameState.STOP) :
             if(self.player.y + self.player.height <= HEIGHT-20) :
-                self.player.death()
+                self.player.death(HEIGHT)
             else :
                 self.state = GameState.MENU
                 self.scoring()
@@ -189,7 +199,6 @@ class Game:
                         self.death_animation()
 
 
-
     def generate_text_score(self, x=WIDTH//2, y=35) :
         self.canvas.delete(self.text_box)
         self.text_box = self.canvas.create_text(x, y, text=self.text, font=("Ariel", 40, "normal"), fill='white')
@@ -199,8 +208,7 @@ class Game:
             if(event.x >= self.bouton_start.x and event.x <= self.bouton_start.x + self.bouton_start.size[0] and event.y >= self.bouton_start.y and event.y <= self.bouton_start.y + self.bouton_start.size[1]) :
                 self.state = GameState.RUN
                 self.canvas.delete(self.bouton_start.id)
-                self.root.bind("<space>", lambda event : self.player_jump())
-                self.player = Bird(self.canvas, path="images/images/dog.png", size=(60,55))
+                self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png", size=(60,55))
                 self.score = 0
                 # self.text_box = None
                 self.text = str(self.score)
