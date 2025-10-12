@@ -120,7 +120,8 @@ class Game:
             if(MODE == "PIC") :
                 if(self.checkPicPressed()) :
                     self.launch_game_PIC()
-                self.root.after(FPS, self.menu)
+                else :
+                    self.root.after(FPS, self.menu)
             else :
                 self.root.bind("<Button>", self.click_menu)
 
@@ -136,7 +137,8 @@ class Game:
         if(MODE == "PIC") :
             if(self.checkPicPressed()) :
                 self.launch_game_PIC()
-            self.root.after(FPS, self.scoring)
+            else : 
+                self.root.after(FPS, self.scoring)
         else :
             self.root.bind("<Button>", self.click_menu)
 
