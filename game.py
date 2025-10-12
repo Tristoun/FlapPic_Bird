@@ -16,7 +16,7 @@ FPS = 17
 WIDTH = 700
 HEIGHT = 900
 
-MODE = "KEYBOARD" #Can be PIC or KEYBOARD
+MODE = "PIC" #Can be PIC or KEYBOARD
 
 pygame.mixer.init()
 
@@ -134,7 +134,9 @@ class Game:
         self.state = GameState.MENU
 
         if(MODE == "PIC") :
-            self.launch_game_PIC()
+            if(self.checkPicPressed()) :
+                self.launch_game_PIC()
+            self.root.after(FPS, self.scoring)
         else :
             self.root.bind("<Button>", self.click_menu)
 
