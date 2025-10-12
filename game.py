@@ -16,7 +16,7 @@ FPS = 17
 WIDTH = 700
 HEIGHT = 900
 
-MODE = "PIC" #Can be PIC or KEYBOARD
+MODE = "KEYBOARD" #Can be PIC or KEYBOARD
 
 pygame.mixer.init()
 
@@ -92,7 +92,7 @@ class Game:
 
             if(MODE == "PIC") :
                 if(self.checkPicPressed()):
-                    self.player_jump()
+                    self.picjump()
 
             self.root.after(FPS, self.launch_game)
 
@@ -146,7 +146,11 @@ class Game:
             if self.player.velocity > 0:
                 self.player.state = BirdState.FALL
         
-    
+    def picjump(self) :
+        if self.state == GameState.RUN:
+            if(self.frame_jump >= 0) :
+                self.frame_jump = 0
+            self.player.jump()
 
     def player_jump(self, event):
         if self.state == GameState.RUN:
