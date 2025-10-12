@@ -9,13 +9,14 @@ from bird import Bird, BirdState
 from background import Background
 from pipe import Pipe
 from bouton import Bouton
+from usbDecoder import USBDecoder
 
 
 FPS = 17
 WIDTH = 700
 HEIGHT = 900
 
-
+MODE = "PIC" #Can be PIC or KEYBOARD
 
 pygame.mixer.init()
 
@@ -36,8 +37,13 @@ class Game:
         self.root = root
         self.canvas = tk.Canvas(root, width=WIDTH, height=HEIGHT)
         self.canvas.pack()
+        self.reader = None
+        if(MODE == "PIC") :
+            self.reader = USBDecoder()  
+            self.reader.start()          
+        else :
+            self.root.bind("<KeyPress-space>", self.player_jump)
 
-        self.root.bind("<KeyPress-space>", self.player_jump)
 
         self.root.tk.call('tk', 'busy', 'hold', self.root)  # Not perfect, hacky
 
@@ -67,6 +73,11 @@ class Game:
         self.space_pressed = False
         self.frame_jump = 0
 
+    def checkPicPressed(self) :
+        if(self.reader.last_value == 1) :
+            return True
+        return False
+
     def launch_game(self) :
         if(self.state == GameState.RUN) :
             self.generate_text_score()
@@ -78,6 +89,10 @@ class Game:
             #Pipes generation and moves
             self.generate_pipes()
             self.pipes_move()
+
+            if(MODE == "PIC") :
+                if(self.checkPicPressed()):
+                    self.player_jump()
 
             self.root.after(FPS, self.launch_game)
 
@@ -102,8 +117,14 @@ class Game:
             self.reset()
             self.player = Bird(self.canvas, path="images/images/dog.png", size=(60,55))
 
-            self.root.bind("<Button>", self.click_menu)
+            if(MODE == "PIC") :
+                if(self.checkPicPressed()) :
+                    self.launch_game_PIC()
+                self.root.after(FPS, self.menu)
+            else :
+                self.root.bind("<Button>", self.click_menu)
 
+ 
     def scoring(self) :
         self.reset()
         self.cadre = Bouton(self.canvas, size=(550, 500),path="images/images/carre.png", x=80, y=80)
@@ -111,7 +132,11 @@ class Game:
         self.generate_text_score(x=450, y=220)
         self.bouton_start = Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2-14)
         self.state = GameState.MENU
-        self.root.bind("<Button>", self.click_menu)
+
+        if(MODE == "PIC") :
+            self.launch_game_PIC()
+        else :
+            self.root.bind("<Button>", self.click_menu)
 
 
     def player_physic(self):
@@ -194,6 +219,20 @@ class Game:
     def generate_text_score(self, x=WIDTH//2, y=35) :
         self.canvas.delete(self.text_box)
         self.text_box = self.canvas.create_text(x, y, text=self.text, font=("Ariel", 40, "normal"), fill='white')
+
+    def launch_game_PIC(self) :
+        self.state = GameState.RUN
+        self.canvas.delete(self.bouton_start.id)
+        self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png", size=(60,55))
+        self.score = 0
+        # self.text_box = None
+        self.text = str(self.score)
+        if(self.cadre!= None) :
+            self.canvas.delete(self.cadre.id)
+        if(self.text_score!= None) :
+            self.canvas.delete(self.text_score.id)
+        self.canvas.delete(self.text_box)
+        self.launch_game()
 
     def click_menu(self, event) :
         if(self.state == GameState.MENU) :
