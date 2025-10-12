@@ -240,6 +240,7 @@ class Game:
         if(self.text_score!= None) :
             self.canvas.delete(self.text_score.id)
         self.canvas.delete(self.text_box)
+        self.reader.last_value = 0
         self.launch_game()
 
     def click_menu(self, event) :
