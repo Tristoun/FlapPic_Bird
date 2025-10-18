@@ -3,7 +3,7 @@ import threading
 import time
 
 class USBDecoder() :
-    def __init__(self, port="COM11"):
+    def __init__(self, port="COM7"):
         self.ser = serial.Serial(port, 9600, timeout=1)
         self.running = False
 
