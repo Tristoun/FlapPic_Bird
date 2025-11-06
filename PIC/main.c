@@ -40,7 +40,7 @@ void __interrupt(high_priority) mainISR(void)
             // Toggle buzzer
             BUZZER_PIN = ~BUZZER_PIN;
 
-            // Arrêter après 200ms
+            // ArrÃªter aprÃ¨s 200ms
             if (buzzerCounter >= 200)
             {
                 buzzerActive = 0;
@@ -61,29 +61,31 @@ void initTimer0(void)
 
 void displayScore(unsigned int score)
 {
-    // Extraire les chiffres (unités, dizaines, centaines)
+    // Extraire les chiffres (unitÃ©s, dizaines, centaines)
     unsigned char units = score % 10;
     unsigned char tens = (score / 10) % 10;
     unsigned char hundreds = (score / 100) % 10;
-    
+
     // Afficher sur les 3 premiers afficheurs
-    // Note: sur EasyPIC, PORTA contrôle quel afficheur est actif (DIS0-DIS3)
-    
+    // Note: sur EasyPIC, PORTA contrÃ´le quel afficheur est actif (DIS0-DIS3)
+
     // Afficher centaines sur DIS0
-    if (score >= 100) {
+    if (score >= 100)
+    {
         LATA = 0x01; // Activer DIS0
         LATD = DIGIT_MAP[hundreds];
         __delay_ms(3);
     }
-    
+
     // Afficher dizaines sur DIS1
-    if (score >= 10) {
+    if (score >= 10)
+    {
         LATA = 0x02; // Activer DIS1
         LATD = DIGIT_MAP[tens];
         __delay_ms(3);
     }
-    
-    // Afficher unités sur DIS2
+
+    // Afficher unitÃ©s sur DIS2
     LATA = 0x04; // Activer DIS2
     LATD = DIGIT_MAP[units];
     __delay_ms(3);
@@ -93,18 +95,18 @@ void main(void)
 {
     // Configuration des ports AVANT initUSB
     ADCON1 = 0x0F; // Tout digital
-    CMCON = 0x07;  // Désactiver comparateurs
+    CMCON = 0x07;  // DÃ©sactiver comparateurs
 
-    TRISBbits.TRISB0 = 1; // Bouton RB0 en entrée
+    TRISBbits.TRISB0 = 1; // Bouton RB0 en entrÃ©e
     TRISCbits.TRISC2 = 0; // RC2 (buzzer) en sortie
     TRISD = 0x00;         // Afficheur en sortie
-    TRISA = 0x00;         // PORTA en sortie (sélection afficheurs)
+    TRISA = 0x00;         // PORTA en sortie (sÃ©lection afficheurs)
 
-    PORTA = 0x04; // Activer DIS2 (unités) par défaut
+    PORTA = 0x04; // Activer DIS2 (unitÃ©s) par dÃ©faut
     PORTD = 0x00;
     LATA = 0x04;
-    LATD = DIGIT_MAP[0]; // Afficher 0 au démarrage
-    BUZZER_PIN = 0; // Buzzer éteint
+    LATD = DIGIT_MAP[0]; // Afficher 0 au dÃ©marrage
+    BUZZER_PIN = 0;      // Buzzer Ã©teint
 
     // Attendre un peu avant d'initialiser USB
     __delay_ms(100);
@@ -112,14 +114,14 @@ void main(void)
     // Initialiser USB
     initUSBLib();
 
-    // Attendre que USB soit prêt
+    // Attendre que USB soit prÃªt
     while (!isUSBReady())
     {
         CDCTxService();
         __delay_ms(10);
     }
 
-    // Activer les interruptions APRÈS que USB soit stable
+    // Activer les interruptions APRÃˆS que USB soit stable
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
 
@@ -133,10 +135,10 @@ void main(void)
 
     while (1)
     {
-        // Appeler CDCTxService régulièrement pour maintenir USB
+        // Appeler CDCTxService rÃ©guliÃ¨rement pour maintenir USB
         CDCTxService();
-        
-        // Rafraîchir l'affichage du score
+
+        // RafraÃ®chir l'affichage du score
         displayScore(score);
 
         // Lecture bouton RB0
@@ -156,7 +158,7 @@ void main(void)
             }
         }
 
-        // Réception USB pour le buzzer ET le score
+        // RÃ©ception USB pour le buzzer ET le score
         if (isUSBReady())
         {
             rxLength = getsUSBUSART(rxBuffer, sizeof(rxBuffer));
@@ -164,17 +166,17 @@ void main(void)
             {
                 for (uint8_t i = 0; i < rxLength; i++)
                 {
-                    // Si on reçoit 'B', activer le buzzer
+                    // Si on reÃ§oit 'B', activer le buzzer
                     if (rxBuffer[i] == 'B')
                     {
                         buzzerActive = 1;
                         buzzerCounter = 0;
                     }
-                    // Si on reçoit 'S', le prochain sera le score
+                    // Si on reÃ§oit 'S', le prochain sera le score
                     else if (rxBuffer[i] == 'S')
                     {
                         scoreIndex = 0;
-                        // Réinitialiser le buffer
+                        // RÃ©initialiser le buffer
                         for (uint8_t j = 0; j < 10; j++)
                             scoreBuffer[j] = 0;
                     }
@@ -183,7 +185,7 @@ void main(void)
                     {
                         scoreBuffer[scoreIndex++] = rxBuffer[i];
                     }
-                    // Si c'est un retour à la ligne, convertir le score
+                    // Si c'est un retour Ã  la ligne, convertir le score
                     else if (rxBuffer[i] == '\n' && scoreIndex > 0)
                     {
                         // Convertir le buffer en nombre

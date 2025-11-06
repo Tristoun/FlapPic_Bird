@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\usbcdcdemo.X.production.hex">
+  <executable name="dist/default/production\PIC.X.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>8812</used>
-      <free>23956</free>
+      <used>10330</used>
+      <free>22438</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>378</used>
-      <free>1670</free>
+      <used>471</used>
+      <free>1577</free>
     </memory>
   </executable>
 </project>

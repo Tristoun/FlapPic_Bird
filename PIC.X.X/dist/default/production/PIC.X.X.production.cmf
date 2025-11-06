@@ -1,0 +1,1744 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\eugen\AppData\Local\Temp\sgrk.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 E E 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\PIC.X.X.production.o
+cinit CODE 0 2F1C 2F1C 32 1
+intcode_body CODE 0 2702 2702 CA 1
+text0 CODE 0 C14 C14 2D2 1
+text1 CODE 0 2FB0 2FB0 2C 1
+text2 CODE 0 2EE4 2EE4 38 1
+text3 CODE 0 3030 3030 E 1
+text4 CODE 0 170C 170C 14A 1
+text5 CODE 0 12AA 12AA 178 1
+text6 CODE 0 2E64 2E64 42 1
+text7 CODE 0 303E 303E E 1
+text8 CODE 0 27CC 27CC B8 1
+text9 CODE 0 1EA6 1EA6 126 1
+text10 CODE 0 2C9E 2C9E 66 1
+text11 CODE 0 2BB4 2BB4 76 1
+text12 CODE 0 3008 3008 28 1
+text13 CODE 0 110E 110E 19C 1
+text14 CODE 0 1AE4 1AE4 142 1
+text16 CODE 0 2F80 2F80 30 1
+text17 CODE 0 EE6 EE6 228 1
+text18 CODE 0 1856 1856 14A 1
+text19 CODE 0 2EA6 2EA6 3E 1
+text20 CODE 0 2FDC 2FDC 2C 1
+text21 CODE 0 2D68 2D68 60 1
+text22 CODE 0 2F4E 2F4E 32 1
+text23 CODE 0 2884 2884 B8 1
+text24 CODE 0 2DC8 2DC8 50 1
+text25 CODE 0 2A9C 2A9C 90 1
+text26 CODE 0 1C26 1C26 142 1
+text27 CODE 0 293C 293C B4 1
+text28 CODE 0 1FCC 1FCC 126 1
+text29 CODE 0 2618 2618 EA 1
+text30 CODE 0 1422 1422 176 1
+text31 CODE 0 2202 2202 10E 1
+text32 CODE 0 1598 1598 174 1
+text33 CODE 0 8B8 8B8 35C 1
+text34 CODE 0 2B2C 2B2C 88 1
+text35 CODE 0 2310 2310 10C 1
+text36 CODE 0 2D04 2D04 64 1
+text37 CODE 0 1D68 1D68 13E 1
+text38 CODE 0 2E18 2E18 4C 1
+text39 CODE 0 29F0 29F0 AC 1
+text40 CODE 0 2C2A 2C2A 74 1
+text41 CODE 0 19A0 19A0 144 1
+text42 CODE 0 2526 2526 F2 1
+text43 CODE 0 241C 241C 10A 1
+text44 CODE 0 20F2 20F2 110 1
+cstackCOMRAM COMRAM 1 1 1 2A 1
+cstackBANK0 BANK0 1 9C 9C 14 1
+cstackBANK1 BANK1 1 100 100 52 1
+temp COMRAM 1 53 53 1 1
+bssBANK0 BANK0 1 60 60 3C 1
+bssBANK1 BANK1 1 152 152 A 1
+intcode CODE 0 8 8 6 1
+smallconst SMALLCONST 0 800 800 B8 1
+bssCOMRAM COMRAM 1 2B 2B 28 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM B0-FF 1
+RAM 15C-3FF 1
+RAM 438-44F 1
+RAM 470-4FF 1
+RAM 580-7FF 1
+SFR F60-FFF 1
+BANK0 B0-FF 1
+BANK1 15C-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 438-44F 1
+BANK4 470-4FF 1
+BANK5 580-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 12-7FF 1
+CONST 304C-7FFF 1
+STACK 15C-3FF 1
+SMALLCONST 304C-7FFF 1
+CODE 4-7 1
+CODE 12-7FF 1
+CODE 304C-7FFF 1
+BIGRAM 54-5F 1
+BIGRAM B0-FF 1
+BIGRAM 15C-3FF 1
+BIGRAM 438-44F 1
+BIGRAM 470-4FF 1
+BIGRAM 580-7FF 1
+COMRAM 54-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 304C-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\PIC.X.X.production.o
+8 intcode CODE >7064:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+8 intcode CODE >27:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+20F2 text44 CODE >1777:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+20F2 text44 CODE >1783:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+20F6 text44 CODE >1784:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+210E text44 CODE >1786:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2112 text44 CODE >1793:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2122 text44 CODE >1795:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2126 text44 CODE >1796:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+212A text44 CODE >1797:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+213A text44 CODE >1799:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+213E text44 CODE >1805:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2146 text44 CODE >1810:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2156 text44 CODE >1814:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+215E text44 CODE >1815:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2170 text44 CODE >1819:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+21A4 text44 CODE >1820:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+21A6 text44 CODE >1817:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+21BA text44 CODE >1827:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+21EE text44 CODE >1828:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+21F0 text44 CODE >1825:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2200 text44 CODE >1831:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+241C text43 CODE >2598:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+241C text43 CODE >2602:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+242E text43 CODE >2605:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2438 text43 CODE >2610:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+244A text43 CODE >2612:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2452 text43 CODE >2613:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2462 text43 CODE >2615:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2466 text43 CODE >2616:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+246A text43 CODE >2619:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+246E text43 CODE >2624:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+247E text43 CODE >2626:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2494 text43 CODE >2627:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2498 text43 CODE >2633:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24AA text43 CODE >2637:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24B6 text43 CODE >2638:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24C2 text43 CODE >2639:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24C6 text43 CODE >2642:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24D6 text43 CODE >2644:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24E2 text43 CODE >2645:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24EE text43 CODE >2646:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24F2 text43 CODE >2649:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+24FE text43 CODE >2650:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+250E text43 CODE >2654:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+250E text43 CODE >2659:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+251E text43 CODE >2661:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+251E text43 CODE >2664:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+251E text43 CODE >2665:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2520 text43 CODE >2668:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2524 text43 CODE >2673:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2526 text42 CODE >1422:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2526 text42 CODE >1429:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2536 text42 CODE >1431:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+253A text42 CODE >1432:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+254A text42 CODE >1434:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+254E text42 CODE >1438:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2560 text42 CODE >1440:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2572 text42 CODE >1441:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+257E text42 CODE >1442:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+258A text42 CODE >1443:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+258E text42 CODE >1444:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+259E text42 CODE >1446:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25A2 text42 CODE >1451:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25B2 text42 CODE >1452:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25C6 text42 CODE >1453:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25D2 text42 CODE >1454:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25DE text42 CODE >1455:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25E2 text42 CODE >1459:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+25F2 text42 CODE >1460:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2606 text42 CODE >1461:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2616 text42 CODE >1463:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2616 text42 CODE >1465:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19A0 text41 CODE >1858:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19A0 text41 CODE >1865:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19B0 text41 CODE >1871:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19C8 text41 CODE >1873:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19CC text41 CODE >1876:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19D4 text41 CODE >1880:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19DC text41 CODE >1882:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+19F8 text41 CODE >1883:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A0C text41 CODE >1887:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A1E text41 CODE >1889:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A2E text41 CODE >1890:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A42 text41 CODE >1891:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A58 text41 CODE >1893:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A64 text41 CODE >1894:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A70 text41 CODE >1895:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A74 text41 CODE >1898:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A80 text41 CODE >1899:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1A90 text41 CODE >1907:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1AA0 text41 CODE >1908:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1AB4 text41 CODE >1912:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1AC0 text41 CODE >1913:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1ACC text41 CODE >1920:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1ACC text41 CODE >1932:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1ACC text41 CODE >1933:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1ACE text41 CODE >1947:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1ADE text41 CODE >1949:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1AE2 text41 CODE >1953:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C2A text40 CODE >2544:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C2A text40 CODE >2546:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C3C text40 CODE >2548:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C40 text40 CODE >2549:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C44 text40 CODE >2554:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C48 text40 CODE >2561:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C58 text40 CODE >2563:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C68 text40 CODE >2564:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C7C text40 CODE >2565:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C88 text40 CODE >2566:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C94 text40 CODE >2567:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C98 text40 CODE >2570:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2C9C text40 CODE >2573:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29F0 text39 CODE >1549:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29F2 text39 CODE >1555:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29FA text39 CODE >1556:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A34 text39 CODE >1558:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A3E text39 CODE >1563:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A4E text39 CODE >1565:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A66 text39 CODE >1566:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A6A text39 CODE >1569:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A82 text39 CODE >1573:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A8C text39 CODE >1574:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A9A text39 CODE >1591:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E18 text38 CODE >884:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E1A text38 CODE >890:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E28 text38 CODE >892:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E32 text38 CODE >894:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E40 text38 CODE >896:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E4A text38 CODE >905:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E56 text38 CODE >907:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E62 text38 CODE >908:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D68 text37 CODE >1001:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D6A text37 CODE >1006:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D7A text37 CODE >1009:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D92 text37 CODE >1010:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D96 text37 CODE >1014:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1DAE text37 CODE >1019:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1DC0 text37 CODE >1021:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1DCC text37 CODE >1035:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1DE0 text37 CODE >1036:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1DF0 text37 CODE >1037:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1DFC text37 CODE >1038:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1E08 text37 CODE >1039:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1E14 text37 CODE >1042:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1E24 text37 CODE >1045:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1E5E text37 CODE >1046:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1E62 text37 CODE >1050:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1E9C text37 CODE >1052:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1EA4 text37 CODE >1053:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2D04 text36 CODE >294:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D04 text36 CODE >297:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D14 text36 CODE >298:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D18 text36 CODE >299:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D1C text36 CODE >300:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D20 text36 CODE >302:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D26 text36 CODE >315:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D30 text36 CODE >316:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D3A text36 CODE >318:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D58 text36 CODE >319:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D62 text36 CODE >346:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2D66 text36 CODE >347:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2310 text35 CODE >147:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2310 text35 CODE >152:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+232A text35 CODE >157:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2344 text35 CODE >163:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2368 text35 CODE >171:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2372 text35 CODE >172:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+237A text35 CODE >173:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+237C text35 CODE >174:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+237E text35 CODE >175:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2382 text35 CODE >178:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+238C text35 CODE >179:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+238E text35 CODE >180:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2392 text35 CODE >184:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2392 text35 CODE >185:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+239A text35 CODE >186:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23A4 text35 CODE >187:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23AC text35 CODE >188:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23AE text35 CODE >189:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23B2 text35 CODE >192:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23C8 text35 CODE >196:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23CC text35 CODE >198:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23CC text35 CODE >199:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23D0 text35 CODE >231:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23D4 text35 CODE >232:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+23D8 text35 CODE >258:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+241A text35 CODE >260:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2B2C text34 CODE >49:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2B2C text34 CODE >51:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2B30 text34 CODE >76:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2B34 text34 CODE >77:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2B38 text34 CODE >85:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2B3C text34 CODE >86:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2B40 text34 CODE >96:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+2BB2 text34 CODE >98:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
+8B8 text33 CODE >2760:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+8B8 text33 CODE >2805:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+8DE text33 CODE >2808:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+8E2 text33 CODE >2809:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+8F6 text33 CODE >2810:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+8FE text33 CODE >2812:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+902 text33 CODE >2813:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+902 text33 CODE >2816:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+962 text33 CODE >2823:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+966 text33 CODE >2826:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+976 text33 CODE >2828:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+994 text33 CODE >2829:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+9AC text33 CODE >2830:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+9B0 text33 CODE >2833:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+9CE text33 CODE >2834:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+9E6 text33 CODE >2841:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+9F4 text33 CODE >2843:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A00 text33 CODE >2844:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A04 text33 CODE >2847:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A0E text33 CODE >2853:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A1C text33 CODE >2855:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A3A text33 CODE >2856:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A3E text33 CODE >2859:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A5C text33 CODE >2863:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A6E text33 CODE >2865:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A84 text33 CODE >2869:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+A92 text33 CODE >2871:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AAA text33 CODE >2872:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AAE text33 CODE >2875:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AC6 text33 CODE >2877:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AC6 text33 CODE >2880:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AD2 text33 CODE >2881:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+ADE text33 CODE >2882:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AE2 text33 CODE >2888:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+AEC text33 CODE >2890:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B02 text33 CODE >2894:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B0E text33 CODE >2895:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B1A text33 CODE >2896:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B36 text33 CODE >2897:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B3A text33 CODE >2901:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B46 text33 CODE >2906:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B50 text33 CODE >2912:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B74 text33 CODE >2914:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B84 text33 CODE >2916:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+B9C text33 CODE >2917:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+BA0 text33 CODE >2920:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+BB8 text33 CODE >2923:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+BC4 text33 CODE >2926:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+BE0 text33 CODE >2927:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+BE4 text33 CODE >2931:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+BF0 text33 CODE >2979:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+C06 text33 CODE >2983:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+C12 text33 CODE >2986:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1598 text32 CODE >2049:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1598 text32 CODE >2051:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15AC text32 CODE >2053:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15B2 text32 CODE >2055:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15B6 text32 CODE >2061:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15C0 text32 CODE >2063:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15C8 text32 CODE >2064:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15CC text32 CODE >2069:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15DC text32 CODE >2074:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+15F8 text32 CODE >2080:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+162A text32 CODE >2081:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+165A text32 CODE >2082:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+165E text32 CODE >2085:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1668 text32 CODE >2092:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1678 text32 CODE >2095:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1694 text32 CODE >2097:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+16BE text32 CODE >2098:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+16C2 text32 CODE >2110:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+16CC text32 CODE >2114:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+16D2 text32 CODE >2115:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+16D6 text32 CODE >2116:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+170A text32 CODE >2118:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2202 text31 CODE >2135:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2202 text31 CODE >2137:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2208 text31 CODE >2138:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+220C text31 CODE >2140:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2210 text31 CODE >2142:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2210 text31 CODE >2143:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2214 text31 CODE >2153:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2224 text31 CODE >2155:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+222C text31 CODE >2158:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+222C text31 CODE >2159:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2230 text31 CODE >2160:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2234 text31 CODE >2161:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2234 text31 CODE >2162:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2238 text31 CODE >2169:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2248 text31 CODE >2171:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2266 text31 CODE >2172:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+226A text31 CODE >2175:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2288 text31 CODE >2178:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+22B4 text31 CODE >2179:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+22BC text31 CODE >2182:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+22F0 text31 CODE >2184:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2300 text31 CODE >2186:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2308 text31 CODE >2187:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+230A text31 CODE >2188:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+230E text31 CODE >2190:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1422 text30 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1422 text30 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+142A text30 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1440 text30 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+144C text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1468 text30 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1482 text30 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1492 text30 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+14A2 text30 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+14BE text30 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+14DA text30 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+14F4 text30 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1504 text30 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1520 text30 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+153A text30 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1552 text30 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+155A text30 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1562 text30 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+156A text30 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1596 text30 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+2618 text29 CODE >1974:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2618 text29 CODE >1979:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+261C text29 CODE >1982:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2638 text29 CODE >1985:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2654 text29 CODE >1988:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2656 text29 CODE >1993:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+265A text29 CODE >1995:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+266A text29 CODE >1996:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+267A text29 CODE >1997:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+268C text29 CODE >2000:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26A8 text29 CODE >2003:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26AA text29 CODE >2005:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26B4 text29 CODE >2008:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26BC text29 CODE >2009:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26C4 text29 CODE >2012:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26C8 text29 CODE >2015:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26D8 text29 CODE >2018:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26DC text29 CODE >2019:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26E0 text29 CODE >2023:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+26FC text29 CODE >2028:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2700 text29 CODE >2030:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FCC text28 CODE >2692:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FCC text28 CODE >2694:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FE8 text28 CODE >2698:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FE8 text28 CODE >2699:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FEC text28 CODE >2700:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FF0 text28 CODE >2702:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FF4 text28 CODE >2704:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FF8 text28 CODE >2705:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1FFC text28 CODE >2707:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2000 text28 CODE >2708:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2004 text28 CODE >2710:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+200E text28 CODE >2711:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2010 text28 CODE >2712:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2014 text28 CODE >2713:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2016 text28 CODE >2714:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+201A text28 CODE >2716:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+201E text28 CODE >2717:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2022 text28 CODE >2720:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2026 text28 CODE >2721:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+202A text28 CODE >2723:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2038 text28 CODE >2724:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+203A text28 CODE >2725:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+203E text28 CODE >2726:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2040 text28 CODE >2727:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2044 text28 CODE >2728:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2044 text28 CODE >2729:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2048 text28 CODE >2730:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+205A text28 CODE >2731:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+205E text28 CODE >2733:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+207A text28 CODE >2734:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+207E text28 CODE >2738:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+20F0 text28 CODE >2739:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+293C text27 CODE >1494:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+293C text27 CODE >1496:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2940 text27 CODE >1497:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2944 text27 CODE >1499:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2956 text27 CODE >1502:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2966 text27 CODE >1503:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+297A text27 CODE >1504:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2986 text27 CODE >1505:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2992 text27 CODE >1506:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2996 text27 CODE >1511:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29B4 text27 CODE >1513:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29BC text27 CODE >1515:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29C0 text27 CODE >1520:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29D6 text27 CODE >1521:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29E2 text27 CODE >1522:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+29EE text27 CODE >1524:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C26 text26 CODE >1622:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C26 text26 CODE >1628:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C28 text26 CODE >1634:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C38 text26 CODE >1636:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C46 text26 CODE >1638:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C4A text26 CODE >1649:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C5A text26 CODE >1651:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C5E text26 CODE >1656:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C62 text26 CODE >1657:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C66 text26 CODE >1658:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C6A text26 CODE >1665:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C7A text26 CODE >1666:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C8E text26 CODE >1667:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C9A text26 CODE >1668:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CA6 text26 CODE >1669:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CB2 text26 CODE >1670:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CC2 text26 CODE >1673:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CC2 text26 CODE >1675:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CD2 text26 CODE >1677:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CD6 text26 CODE >1691:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CE6 text26 CODE >1693:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CEA text26 CODE >1716:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CEE text26 CODE >1717:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1CF2 text26 CODE >1718:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D02 text26 CODE >1720:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D0A text26 CODE >1735:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D0E text26 CODE >1738:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D1E text26 CODE >1739:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D32 text26 CODE >1740:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D3E text26 CODE >1741:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D4A text26 CODE >1744:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D4E text26 CODE >1745:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D52 text26 CODE >1746:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1D66 text26 CODE >1754:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A9C text25 CODE >2471:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2A9C text25 CODE >2476:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AA0 text25 CODE >2477:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AA4 text25 CODE >2478:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AA8 text25 CODE >2479:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AAC text25 CODE >2480:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AB0 text25 CODE >2481:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AB4 text25 CODE >2490:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AC0 text25 CODE >2492:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2ACC text25 CODE >2493:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AD8 text25 CODE >2494:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AE2 text25 CODE >2495:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AEE text25 CODE >2497:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AF2 text25 CODE >2498:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AFA text25 CODE >2499:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2AFE text25 CODE >2500:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2B06 text25 CODE >2506:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2B0A text25 CODE >2507:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2B26 text25 CODE >2520:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2B2A text25 CODE >2521:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DC8 text24 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2DC8 text24 CODE >11:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2DD0 text24 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2DD8 text24 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2DDC text24 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2DEC text24 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2DFC text24 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2E16 text24 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memcpy.c
+2884 text23 CODE >2378:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2884 text23 CODE >2384:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2888 text23 CODE >2388:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+289E text23 CODE >2392:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+28BA text23 CODE >2400:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+28C2 text23 CODE >2402:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+28CC text23 CODE >2405:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+28EA text23 CODE >2411:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2912 text23 CODE >2414:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2916 text23 CODE >2415:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+291A text23 CODE >2419:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2922 text23 CODE >2422:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2936 text23 CODE >2426:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+293A text23 CODE >2429:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F4E text22 CODE >3031:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F4E text22 CODE >3039:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F5A text22 CODE >3040:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F6A text22 CODE >3042:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F6C text22 CODE >3044:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F7C text22 CODE >3046:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F7E text22 CODE >3049:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2D68 text21 CODE >2208:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2D68 text21 CODE >2220:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2D76 text21 CODE >2223:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DAA text21 CODE >2226:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DB6 text21 CODE >2227:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DC2 text21 CODE >2229:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DC4 text21 CODE >2230:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DC4 text21 CODE >2232:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2DC6 text21 CODE >2233:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FDC text20 CODE >2251:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FDC text20 CODE >2276:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FDE text20 CODE >2277:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FE0 text20 CODE >2280:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FE2 text20 CODE >2283:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FE6 text20 CODE >2284:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2FEA text20 CODE >2291:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+3006 text20 CODE >2292:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EA6 text19 CODE >2309:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EA6 text19 CODE >2311:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EAA text19 CODE >2317:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EC6 text19 CODE >2324:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EC8 text19 CODE >2329:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2ECA text19 CODE >2347:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2ECE text19 CODE >2350:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2ED0 text19 CODE >2347:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EDE text19 CODE >2353:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EE2 text19 CODE >2355:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1856 text18 CODE >281:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1856 text18 CODE >285:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1858 text18 CODE >292:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+185C text18 CODE >295:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1860 text18 CODE >298:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1864 text18 CODE >300:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1880 text18 CODE >302:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+188C text18 CODE >311:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1890 text18 CODE >313:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18A8 text18 CODE >314:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18BA text18 CODE >317:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18BC text18 CODE >320:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18C0 text18 CODE >323:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18C2 text18 CODE >326:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18C4 text18 CODE >331:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18C6 text18 CODE >333:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18CC text18 CODE >334:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18D0 text18 CODE >335:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18D8 text18 CODE >336:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18E6 text18 CODE >340:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18EA text18 CODE >341:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18EE text18 CODE >343:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18F2 text18 CODE >344:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18F6 text18 CODE >345:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18FA text18 CODE >349:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+18FE text18 CODE >351:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1916 text18 CODE >352:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+192E text18 CODE >353:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+193E text18 CODE >354:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+194E text18 CODE >355:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1960 text18 CODE >358:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+196A text18 CODE >360:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+196E text18 CODE >362:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1978 text18 CODE >363:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+197C text18 CODE >364:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1980 text18 CODE >365:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1982 text18 CODE >368:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1986 text18 CODE >370:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1996 text18 CODE >371:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+199A text18 CODE >374:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+199E text18 CODE >375:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+EE6 text17 CODE >481:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+EE6 text17 CODE >594:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+EF6 text17 CODE >605:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F04 text17 CODE >612:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F08 text17 CODE >618:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F0A text17 CODE >619:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F0C text17 CODE >620:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F10 text17 CODE >640:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F2C text17 CODE >642:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F2E text17 CODE >646:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F32 text17 CODE >653:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F40 text17 CODE >655:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F42 text17 CODE >656:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F46 text17 CODE >657:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F46 text17 CODE >669:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F62 text17 CODE >671:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F66 text17 CODE >675:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F68 text17 CODE >677:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F6C text17 CODE >687:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F6E text17 CODE >693:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F8A text17 CODE >700:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F8E text17 CODE >714:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+F9C text17 CODE >717:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FAA text17 CODE >719:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FC6 text17 CODE >721:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FC8 text17 CODE >724:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FCC text17 CODE >741:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FDC text17 CODE >743:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FDE text17 CODE >750:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FEE text17 CODE >752:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+FF2 text17 CODE >757:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+100E text17 CODE >759:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1012 text17 CODE >762:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+102E text17 CODE >764:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1048 text17 CODE >765:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+104C text17 CODE >780:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+105C text17 CODE >782:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+105E text17 CODE >783:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1062 text17 CODE >784:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1062 text17 CODE >789:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1070 text17 CODE >791:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1074 text17 CODE >793:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1082 text17 CODE >796:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1086 text17 CODE >797:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1090 text17 CODE >799:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1092 text17 CODE >804:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10A0 text17 CODE >806:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10B0 text17 CODE >807:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10B4 text17 CODE >810:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10C4 text17 CODE >816:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10D4 text17 CODE >818:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10D8 text17 CODE >819:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10DC text17 CODE >822:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+10F8 text17 CODE >829:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+110A text17 CODE >830:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+110A text17 CODE >832:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+110C text17 CODE >833:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2F80 text16 CODE >20:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2F80 text16 CODE >22:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2F8E text16 CODE >24:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2FAA text16 CODE >26:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2FAE text16 CODE >29:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2702 intcode_body CODE >27:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+272C intcode_body CODE >29:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2730 intcode_body CODE >32:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+273E intcode_body CODE >34:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2740 intcode_body CODE >35:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2744 intcode_body CODE >37:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2754 intcode_body CODE >39:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2758 intcode_body CODE >41:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+277C intcode_body CODE >44:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2792 intcode_body CODE >46:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2796 intcode_body CODE >47:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+279E intcode_body CODE >48:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+27A0 intcode_body CODE >52:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1AE4 text14 CODE >1001:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1AE8 text14 CODE >1006:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1AFA text14 CODE >1009:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B12 text14 CODE >1010:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B16 text14 CODE >1014:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B2E text14 CODE >1019:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B40 text14 CODE >1021:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B4C text14 CODE >1035:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B60 text14 CODE >1036:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B70 text14 CODE >1037:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B7C text14 CODE >1038:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B88 text14 CODE >1039:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1B94 text14 CODE >1042:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1BA4 text14 CODE >1045:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1BDE text14 CODE >1046:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1BE2 text14 CODE >1050:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C1C text14 CODE >1052:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1C24 text14 CODE >1053:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+110E text13 CODE >836:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+110E text13 CODE >841:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1110 text13 CODE >845:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+113A text13 CODE >847:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+113C text13 CODE >848:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1140 text13 CODE >856:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1152 text13 CODE >857:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1156 text13 CODE >862:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1166 text13 CODE >864:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1168 text13 CODE >865:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+116C text13 CODE >871:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+117E text13 CODE >873:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+119C text13 CODE >875:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11A0 text13 CODE >876:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11A4 text13 CODE >877:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11B4 text13 CODE >882:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11C4 text13 CODE >883:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11CC text13 CODE >884:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11CC text13 CODE >885:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11D0 text13 CODE >890:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11D6 text13 CODE >892:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11DE text13 CODE >894:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11E2 text13 CODE >895:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+11F6 text13 CODE >899:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+120C text13 CODE >900:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1210 text13 CODE >901:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1214 text13 CODE >902:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1216 text13 CODE >897:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+122A text13 CODE >909:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1240 text13 CODE >910:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1244 text13 CODE >911:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1248 text13 CODE >912:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+124A text13 CODE >907:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+125A text13 CODE >920:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+126A text13 CODE >922:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+127C text13 CODE >923:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1284 text13 CODE >925:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+1288 text13 CODE >927:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+12A6 text13 CODE >931:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+12A8 text13 CODE >932:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+3008 text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+3008 text12 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+3016 text12 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+301E text12 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+3026 text12 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+302E text12 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2BB4 text11 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BB4 text11 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BBE text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BD0 text11 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BD4 text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BD8 text11 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BDE text11 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BE0 text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BEE text11 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2BF4 text11 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C0A text11 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C12 text11 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C14 text11 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C1A text11 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C20 text11 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C20 text11 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C28 text11 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+2C9E text10 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2C9E text10 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CB2 text10 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CB6 text10 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CBA text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CC0 text10 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CC2 text10 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CD0 text10 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CE6 text10 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CEE text10 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CF4 text10 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CFA text10 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2CFA text10 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+2D02 text10 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+1EA6 text9 CODE >62:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1EA6 text9 CODE >65:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1EC2 text9 CODE >66:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1EF2 text9 CODE >67:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F22 text9 CODE >73:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F38 text9 CODE >74:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F3C text9 CODE >75:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F4E text9 CODE >76:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F60 text9 CODE >80:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F78 text9 CODE >81:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F7C text9 CODE >82:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1F8E text9 CODE >83:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1FA0 text9 CODE >87:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1FA4 text9 CODE >88:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1FB8 text9 CODE >89:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+1FCA text9 CODE >90:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+27CC text8 CODE >485:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+27CC text8 CODE >487:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+27D2 text8 CODE >489:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+27FA text8 CODE >495:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2818 text8 CODE >496:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2828 text8 CODE >501:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2830 text8 CODE >502:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2860 text8 CODE >508:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+287E text8 CODE >512:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2882 text8 CODE >514:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+303E text7 CODE >54:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+303E text7 CODE >56:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+3042 text7 CODE >57:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+3046 text7 CODE >58:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+3048 text7 CODE >59:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+304A text7 CODE >60:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2E64 text6 CODE >1358:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E64 text6 CODE >1361:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E74 text6 CODE >1366:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E78 text6 CODE >1369:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E7C text6 CODE >1373:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E88 text6 CODE >1375:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2E8C text6 CODE >1378:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EA0 text6 CODE >1381:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+2EA4 text6 CODE >1388:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+12AA text5 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+12AA text5 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+12B2 text5 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+12CA text5 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+12D6 text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+12F2 text5 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+130C text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+131C text5 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+132C text5 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1348 text5 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1364 text5 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+137E text5 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+138E text5 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13AA text5 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13C4 text5 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13DC text5 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13E4 text5 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13EC text5 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+13F4 text5 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+1420 text5 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\memset.c
+170C text4 CODE >281:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+170C text4 CODE >285:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+170E text4 CODE >292:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1712 text4 CODE >295:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1716 text4 CODE >298:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+171A text4 CODE >300:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1738 text4 CODE >302:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1744 text4 CODE >311:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+174A text4 CODE >313:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1762 text4 CODE >314:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1774 text4 CODE >317:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1776 text4 CODE >320:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+177A text4 CODE >323:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+177C text4 CODE >326:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+177E text4 CODE >331:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1780 text4 CODE >333:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1784 text4 CODE >334:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1788 text4 CODE >335:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1790 text4 CODE >336:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+179E text4 CODE >340:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17A2 text4 CODE >341:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17A6 text4 CODE >343:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17AA text4 CODE >344:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17AE text4 CODE >345:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17B2 text4 CODE >349:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17B6 text4 CODE >351:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17CE text4 CODE >352:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17E6 text4 CODE >353:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+17F6 text4 CODE >354:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1806 text4 CODE >355:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1818 text4 CODE >358:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1820 text4 CODE >360:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1824 text4 CODE >362:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+182E text4 CODE >363:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1832 text4 CODE >364:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1836 text4 CODE >365:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1838 text4 CODE >368:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+183C text4 CODE >370:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+184C text4 CODE >371:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1850 text4 CODE >374:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+1854 text4 CODE >375:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
+3030 text3 CODE >10:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+3030 text3 CODE >13:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+3032 text3 CODE >14:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+3034 text3 CODE >16:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+3038 text3 CODE >17:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+303C text3 CODE >18:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2EE4 text2 CODE >31:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2EE4 text2 CODE >33:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2F1A text2 CODE >34:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_cdc_lib.c
+2FB0 text1 CODE >556:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2FB0 text1 CODE >581:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2FB2 text1 CODE >582:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2FC2 text1 CODE >584:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2FD8 text1 CODE >586:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+2FDA text1 CODE >587:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
+C14 text0 CODE >92:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C14 text0 CODE >95:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C18 text0 CODE >96:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C1C text0 CODE >98:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C1E text0 CODE >99:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C20 text0 CODE >100:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C24 text0 CODE >101:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C28 text0 CODE >103:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C2C text0 CODE >104:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C30 text0 CODE >105:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C34 text0 CODE >106:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C42 text0 CODE >107:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C44 text0 CODE >110:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C5E text0 CODE >113:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C62 text0 CODE >116:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C66 text0 CODE >118:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C6A text0 CODE >119:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C7A text0 CODE >116:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C8E text0 CODE >123:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C90 text0 CODE >124:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C92 text0 CODE >126:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C96 text0 CODE >128:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C9C text0 CODE >130:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+C9C text0 CODE >132:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CA0 text0 CODE >137:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CA4 text0 CODE >140:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CB0 text0 CODE >143:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CBA text0 CODE >145:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CD0 text0 CODE >147:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CD4 text0 CODE >148:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CE4 text0 CODE >150:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+CF8 text0 CODE >153:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D0A text0 CODE >154:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D0E text0 CODE >160:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D22 text0 CODE >162:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D38 text0 CODE >163:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D48 text0 CODE >165:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D50 text0 CODE >168:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D6E text0 CODE >170:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D72 text0 CODE >171:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D7A text0 CODE >172:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D7E text0 CODE >174:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+D9C text0 CODE >176:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+DA0 text0 CODE >178:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+DA4 text0 CODE >179:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+DCA text0 CODE >182:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+E02 text0 CODE >184:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+E20 text0 CODE >185:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+E24 text0 CODE >187:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+E52 text0 CODE >190:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+E5A text0 CODE >191:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+E62 text0 CODE >193:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+EA6 text0 CODE >194:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+EBA text0 CODE >195:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+EC2 text0 CODE >196:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+ECA text0 CODE >197:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+ECA text0 CODE >198:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
+2F1C cinit CODE >2628:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F1C cinit CODE >2630:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F1C cinit CODE >2633:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F1C cinit CODE >2782:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F20 cinit CODE >2783:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F22 cinit CODE >2784:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F22 cinit CODE >2785:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F24 cinit CODE >2786:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F26 cinit CODE >2787:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F28 cinit CODE >2790:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F2C cinit CODE >2791:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F2E cinit CODE >2792:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F2E cinit CODE >2793:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F30 cinit CODE >2794:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F32 cinit CODE >2795:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F34 cinit CODE >2798:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F38 cinit CODE >2799:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F3A cinit CODE >2800:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F3A cinit CODE >2801:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F3C cinit CODE >2802:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F3E cinit CODE >2803:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F40 cinit CODE >2809:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F40 cinit CODE >2811:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F42 cinit CODE >2812:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F44 cinit CODE >2814:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F46 cinit CODE >2815:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F48 cinit CODE >2816:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F4A cinit CODE >2817:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__end_of_DIGIT_MAP 80B 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+___lwmod@counter A7 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PIC.X.X.production.o
+USBStdGetStatusHandler@p 3 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hspace_1 15C 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USB1msTickCount 2B 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+main@scoreIndex 150 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+__size_ofi2_USBTransferOnePacket 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBTransferOnePacket@dir 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+USBTransferOnePacket@len 9F 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PIC.X.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__size_of_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PIC.X.X.production.o
+__end_of_USBStdSetCfgHandler 2702 0 CODE 0 text29 dist/default/production\PIC.X.X.production.o
+USBEnableEndpoint@options 9 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_VREGEN$ON 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_USBIncrement1msInternalTimers 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_CDCTxService 110E 0 CODE 0 text13 dist/default/production\PIC.X.X.production.o
+main@i 151 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+main@j 14F 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_LATA F89 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_LATD F8C 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UCFG F6F 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UCON F6D 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UEIE F6B 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UEIR F6A 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UEP0 F70 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UEP1 F71 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\sgrk.o
+_main C14 0 CODE 0 text0 dist/default/production\PIC.X.X.production.o
+_pDst 2F 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+btemp 53 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+_DIGIT_MAP 801 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+start E 0 CODE 0 init C:\Users\eugen\AppData\Local\Temp\sgrk.o
+main@lastState 14A 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+_USBTransferOnePacket 1AE4 0 CODE 0 text14 dist/default/production\PIC.X.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBDeviceInit 170C 0 CODE 0 text4 dist/default/production\PIC.X.X.production.o
+?___wmul 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_pBDTEntryEP0OutNext 31 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+i2memset@dest 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__size_of_USBDeviceTasks 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBCtrlTrfInHandler@lastDTS 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_USBConfigureEndpoint 29F0 0 CODE 0 text39 dist/default/production\PIC.X.X.production.o
+__Hpowerup E 0 CODE 0 powerup dist/default/production\PIC.X.X.production.o
+__end_of_processUSBTasks 2FB0 0 CODE 0 text16 dist/default/production\PIC.X.X.production.o
+_UEP0bits F70 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_CDCDataOutHandle 8C 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+_CtrlTrfData 450 0 ABS 1 - dist/default/production\PIC.X.X.production.o
+_buzzerActive 47 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+ttemp5 54 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+ttemp6 57 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+ttemp7 5B 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+__accesstop 60 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\sgrk.o
+intlevel0 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
+intlevel1 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
+intlevel2 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
+intlevel3 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__CFG_USBDIV$2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_initTimer0 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_initUSBLib 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PIC.X.X.production.o
+_pBDTEntryIn 6E 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+wtemp8 54 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+__size_of_CDCTxService 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_CDCDataInHandle 8A 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlTrfRxService 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_USBEnableEndpoint 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\PIC.X.X.production.o
+_controlTransferState 44 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBCtrlTrfTxService 20F2 0 CODE 0 text44 dist/default/production\PIC.X.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlEPAllowDataStage 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBDeviceInit@i A8 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__size_of_putUSBUSART 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+___wmul@multiplicand 9E 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+displayScore@tens AC 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_ADCON1 FC1 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_line_coding 48 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\sgrk.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__end_of_USBCtrlEPServiceComplete 1D68 0 CODE 0 text26 dist/default/production\PIC.X.X.production.o
+__end_of_CDCTxService 12AA 0 CODE 0 text13 dist/default/production\PIC.X.X.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PIC.X.X.production.o
+__end_of___wmul 3030 0 CODE 0 text12 dist/default/production\PIC.X.X.production.o
+_processUSBTasks 2F80 0 CODE 0 text16 dist/default/production\PIC.X.X.production.o
+?_USBTransferOnePacket 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__end_of_USBStdGetStatusHandler 2310 0 CODE 0 text31 dist/default/production\PIC.X.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PIC.X.X.production.o
+main@msg 8B2 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_SetupPkt 430 0 ABS 1 - dist/default/production\PIC.X.X.production.o
+displayScore@score A8 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__size_of_USBCheckCDCRequest 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+displayScore@units AB 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlTrfOutHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBEnableEndpoint@ep C 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PIC.X.X.production.o
+__Hintcodelo E 0 CODE 0 intcodelo dist/default/production\PIC.X.X.production.o
+__size_of_USBStdGetDscHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+main@rxBuffer 100 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+___lwmod@divisor A5 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__end_of_USBStallHandler 2DC8 0 CODE 0 text21 dist/default/production\PIC.X.X.production.o
+__end_of___lwdiv 2C2A 0 CODE 0 text11 dist/default/production\PIC.X.X.production.o
+__end_of___lwmod 2D04 0 CODE 0 text10 dist/default/production\PIC.X.X.production.o
+_USBCtrlTrfSetupHandler 2A9C 0 CODE 0 text25 dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlEPAllowStatusStage 2618 0 CODE 0 text42 dist/default/production\PIC.X.X.production.o
+_USBCtrlTrfRxService 19A0 0 CODE 0 text41 dist/default/production\PIC.X.X.production.o
+USBStdFeatureReqHandler@pUEP 17 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+USBCtrlTrfRxService@byteToRead 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__size_of_USBDeviceInit 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlTrfOutHandler 2C9E 0 CODE 0 text40 dist/default/production\PIC.X.X.production.o
+___lwdiv@quotient A1 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_USBBusIsSuspended 42 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__size_of_mainISR 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+memcpy@tmp B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+___lwmod@dividend A3 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_USBDeferOUTDataStagePackets 3A 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__Lintcodelo E 0 CODE 0 intcodelo dist/default/production\PIC.X.X.production.o
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_isUSBReady$494 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+start_initialization 2F1C 0 CODE 0 cinit dist/default/production\PIC.X.X.production.o
+main@newScore 14B 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PIC.X.X.production.o
+i2USBTransferOnePacket@ep 9 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__size_ofi2_memset 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_TRISBbits F93 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_TRISCbits F94 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBCheckStdRequest 20F2 0 CODE 0 text28 dist/default/production\PIC.X.X.production.o
+main@rxLength 14D 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_device_dsc 89C 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__end_of_memcpy 2E18 0 CODE 0 text24 dist/default/production\PIC.X.X.production.o
+__end_of_memset 1422 0 CODE 0 text5 dist/default/production\PIC.X.X.production.o
+_USBTicksSinceSuspendEnd 39 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBDeviceInit 1856 0 CODE 0 text4 dist/default/production\PIC.X.X.production.o
+_USBStdGetDscHandler 1598 0 CODE 0 text32 dist/default/production\PIC.X.X.production.o
+__pcstackBANK0 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+__end_of_USER_USB_CALLBACK_EVENT_HANDLER 2BB4 0 CODE 0 text34 dist/default/production\PIC.X.X.production.o
+_IPR2bits FA2 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlTrfTxService 2202 0 CODE 0 text44 dist/default/production\PIC.X.X.production.o
+_USBStallHandler 2D68 0 CODE 0 text21 dist/default/production\PIC.X.X.production.o
+_cdc_data_rx 540 0 ABS 1 - dist/default/production\PIC.X.X.production.o
+_cdc_data_tx 500 0 ABS 1 - dist/default/production\PIC.X.X.production.o
+_getsUSBUSART 27CC 0 CODE 0 text8 dist/default/production\PIC.X.X.production.o
+__end_of_USBEnableEndpoint 2E64 0 CODE 0 text38 dist/default/production\PIC.X.X.production.o
+_UIEbits F69 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+i2_USBTransferOnePacket 1D68 0 CODE 0 text37 dist/default/production\PIC.X.X.production.o
+_UIRbits F68 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\PIC.X.X.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\PIC.X.X.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\PIC.X.X.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\PIC.X.X.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\PIC.X.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\PIC.X.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\PIC.X.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\PIC.X.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\PIC.X.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\PIC.X.X.production.o
+__end_of_USBWakeFromSuspend 2EE4 0 CODE 0 text19 dist/default/production\PIC.X.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\PIC.X.X.production.o
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\PIC.X.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\PIC.X.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\PIC.X.X.production.o
+__size_of_processUSBTasks 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\PIC.X.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\PIC.X.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\PIC.X.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\PIC.X.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\PIC.X.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\PIC.X.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\PIC.X.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\PIC.X.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\PIC.X.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\PIC.X.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\PIC.X.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\PIC.X.X.production.o
+_USBCtrlEPService 2884 0 CODE 0 text23 dist/default/production\PIC.X.X.production.o
+___lwdiv@counter A0 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PIC.X.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\PIC.X.X.production.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\eugen\AppData\Local\Temp\sgrk.o
+_USBCheckStdRequest 1FCC 0 CODE 0 text28 dist/default/production\PIC.X.X.production.o
+_isUSBReady 2EE4 0 CODE 0 text2 dist/default/production\PIC.X.X.production.o
+_USBIncrement1msInternalTimers 2F4E 0 CODE 0 text22 dist/default/production\PIC.X.X.production.o
+USBStdFeatureReqHandler@p 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\PIC.X.X.production.o
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\PIC.X.X.production.o
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USER_USB_CALLBACK_EVENT_HANDLER@event D 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+USER_USB_CALLBACK_EVENT_HANDLER@size 11 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+USBTransferOnePacket@handle A5 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+USER_USB_CALLBACK_EVENT_HANDLER@pdata F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_cdc_notice 152 0 BANK1 1 bssBANK1 dist/default/production\PIC.X.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\PIC.X.X.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\PIC.X.X.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\PIC.X.X.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\PIC.X.X.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\PIC.X.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\PIC.X.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\PIC.X.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\PIC.X.X.production.o
+_displayScore 1EA6 0 CODE 0 text9 dist/default/production\PIC.X.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\PIC.X.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\PIC.X.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\PIC.X.X.production.o
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\PIC.X.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\PIC.X.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\PIC.X.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\PIC.X.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\PIC.X.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\PIC.X.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\PIC.X.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\PIC.X.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\PIC.X.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\PIC.X.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\PIC.X.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\PIC.X.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\PIC.X.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\PIC.X.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\PIC.X.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\PIC.X.X.production.o
+i2_memset 1422 0 CODE 0 text30 dist/default/production\PIC.X.X.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlTrfRxService 1AE4 0 CODE 0 text41 dist/default/production\PIC.X.X.production.o
+_PORTBbits F81 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+memcpy@d1 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+memcpy@s1 3 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_INTCONbits FF2 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_pCDCDst 7E 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+_pCDCSrc 81 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+CDCTxService@i A7 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\PIC.X.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\PIC.X.X.production.o
+__Hinit 12 0 CODE 0 init dist/default/production\PIC.X.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\PIC.X.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\PIC.X.X.production.o
+__Htemp 54 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\PIC.X.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\PIC.X.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\PIC.X.X.production.o
+__Linit E 0 CODE 0 init dist/default/production\PIC.X.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\PIC.X.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\PIC.X.X.production.o
+__Ltemp 53 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\PIC.X.X.production.o
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+memcpy@d 7 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+memcpy@n 5 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+memcpy@s 9 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+memset@dest 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+memset@c 9E 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+memset@k A4 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+memset@n A0 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+memset@s A6 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+___wmul 3008 0 CODE 0 text12 dist/default/production\PIC.X.X.production.o
+__size_of_getsUSBUSART 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\PIC.X.X.production.o
+int$flags 53 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
+_cdc_rx_len 92 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__end_of_device_dsc 8AE 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__end_of_mainISR 27CC 0 CODE 0 intcode_body dist/default/production\PIC.X.X.production.o
+__end_ofi2_memset 1598 0 CODE 0 text30 dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlTrfInHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hintret 0 0 ABS 0 intret dist/default/production\PIC.X.X.production.o
+_USBSuspend 2FDC 0 CODE 0 text20 dist/default/production\PIC.X.X.production.o
+_cdc_trf_state 38 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\PIC.X.X.production.o
+_BDT 400 0 ABS 1 - dist/default/production\PIC.X.X.production.o
+_UIE F69 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UIR F68 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__S0 30000E 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__S1 15C 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__S2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+?i2_USBTransferOnePacket 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_USBWakeFromSuspend 2EA6 0 CODE 0 text19 dist/default/production\PIC.X.X.production.o
+_cdc_tx_len 91 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+_USBStdFeatureReqHandler 8B8 0 CODE 0 text33 dist/default/production\PIC.X.X.production.o
+_BothEP0OutUOWNsSet 40 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_UCONbits F6D 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBCtrlTrfRxService@i 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__end_of_USBStdFeatureReqHandler C14 0 CODE 0 text33 dist/default/production\PIC.X.X.production.o
+__CFG_PLLDIV$2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_putUSBUSART 2FB0 0 CODE 0 text1 dist/default/production\PIC.X.X.production.o
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_BaudRateGen 7A 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PIC.X.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\PIC.X.X.production.o
+__end_of_getsUSBUSART 2884 0 CODE 0 text8 dist/default/production\PIC.X.X.production.o
+__size_of_displayScore 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USBAlternateInterface 4F 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBDeviceState 46 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBDeviceTasks EE6 0 CODE 0 text17 dist/default/production\PIC.X.X.production.o
+int_func 2702 0 CODE 0 intcode_body dist/default/production\PIC.X.X.production.o
+__size_of_USBStdGetStatusHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_ofi2_USBDeviceInit 19A0 0 CODE 0 text18 dist/default/production\PIC.X.X.production.o
+displayScore@hundreds AD 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__end_of_USBStdGetDscHandler 170C 0 CODE 0 text32 dist/default/production\PIC.X.X.production.o
+__end_of_isUSBReady 2F1C 0 CODE 0 text2 dist/default/production\PIC.X.X.production.o
+__Lintentry 0 0 ABS 0 intentry dist/default/production\PIC.X.X.production.o
+__size_of_USBStallHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlTrfSetupHandler 2B2C 0 CODE 0 text25 dist/default/production\PIC.X.X.production.o
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\PIC.X.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\PIC.X.X.production.o
+_USBEnableEndpoint 2E18 0 CODE 0 text38 dist/default/production\PIC.X.X.production.o
+__activetblptr 2 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\PIC.X.X.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\PIC.X.X.production.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\PIC.X.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\PIC.X.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\PIC.X.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\PIC.X.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\PIC.X.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\PIC.X.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\PIC.X.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\PIC.X.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\PIC.X.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\PIC.X.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\PIC.X.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\PIC.X.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\PIC.X.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production\PIC.X.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\PIC.X.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\PIC.X.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production\PIC.X.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production\PIC.X.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production\PIC.X.X.production.o
+__Htext29 0 0 ABS 0 text29 dist/default/production\PIC.X.X.production.o
+__Htext30 0 0 ABS 0 text30 dist/default/production\PIC.X.X.production.o
+__Htext31 0 0 ABS 0 text31 dist/default/production\PIC.X.X.production.o
+__Htext32 0 0 ABS 0 text32 dist/default/production\PIC.X.X.production.o
+__Htext33 0 0 ABS 0 text33 dist/default/production\PIC.X.X.production.o
+__Htext34 0 0 ABS 0 text34 dist/default/production\PIC.X.X.production.o
+__Htext35 0 0 ABS 0 text35 dist/default/production\PIC.X.X.production.o
+__Htext36 0 0 ABS 0 text36 dist/default/production\PIC.X.X.production.o
+__Htext37 0 0 ABS 0 text37 dist/default/production\PIC.X.X.production.o
+__Htext38 0 0 ABS 0 text38 dist/default/production\PIC.X.X.production.o
+__Htext39 0 0 ABS 0 text39 dist/default/production\PIC.X.X.production.o
+__Htext40 0 0 ABS 0 text40 dist/default/production\PIC.X.X.production.o
+__Htext41 0 0 ABS 0 text41 dist/default/production\PIC.X.X.production.o
+__Htext42 0 0 ABS 0 text42 dist/default/production\PIC.X.X.production.o
+__Htext43 0 0 ABS 0 text43 dist/default/production\PIC.X.X.production.o
+__Htext44 0 0 ABS 0 text44 dist/default/production\PIC.X.X.production.o
+_control_signal_bitmap 37 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlEPService 293C 0 CODE 0 text23 dist/default/production\PIC.X.X.production.o
+i2USBTransferOnePacket@data 2 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_USBCtrlTrfInHandler 241C 0 CODE 0 text43 dist/default/production\PIC.X.X.production.o
+__size_of_USBTransferOnePacket 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_PIE2bits FA0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_memcpy 2DC8 0 CODE 0 text24 dist/default/production\PIC.X.X.production.o
+_memset 12AA 0 CODE 0 text5 dist/default/production\PIC.X.X.production.o
+__end_of_displayScore 1FCC 0 CODE 0 text9 dist/default/production\PIC.X.X.production.o
+USBConfigureEndpoint@handle 7 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+i2memset@c 3 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+i2memset@k 9 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+i2memset@n 5 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+i2memset@s B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__ptext10 2C9E 0 CODE 0 text10 dist/default/production\PIC.X.X.production.o
+__ptext11 2BB4 0 CODE 0 text11 dist/default/production\PIC.X.X.production.o
+__ptext12 3008 0 CODE 0 text12 dist/default/production\PIC.X.X.production.o
+__ptext13 110E 0 CODE 0 text13 dist/default/production\PIC.X.X.production.o
+__ptext14 1AE4 0 CODE 0 text14 dist/default/production\PIC.X.X.production.o
+__ptext16 2F80 0 CODE 0 text16 dist/default/production\PIC.X.X.production.o
+__ptext17 EE6 0 CODE 0 text17 dist/default/production\PIC.X.X.production.o
+__ptext18 1856 0 CODE 0 text18 dist/default/production\PIC.X.X.production.o
+__ptext19 2EA6 0 CODE 0 text19 dist/default/production\PIC.X.X.production.o
+__ptext20 2FDC 0 CODE 0 text20 dist/default/production\PIC.X.X.production.o
+__ptext21 2D68 0 CODE 0 text21 dist/default/production\PIC.X.X.production.o
+__ptext22 2F4E 0 CODE 0 text22 dist/default/production\PIC.X.X.production.o
+__ptext23 2884 0 CODE 0 text23 dist/default/production\PIC.X.X.production.o
+__ptext24 2DC8 0 CODE 0 text24 dist/default/production\PIC.X.X.production.o
+__ptext25 2A9C 0 CODE 0 text25 dist/default/production\PIC.X.X.production.o
+__ptext26 1C26 0 CODE 0 text26 dist/default/production\PIC.X.X.production.o
+__ptext27 293C 0 CODE 0 text27 dist/default/production\PIC.X.X.production.o
+__ptext28 1FCC 0 CODE 0 text28 dist/default/production\PIC.X.X.production.o
+__ptext29 2618 0 CODE 0 text29 dist/default/production\PIC.X.X.production.o
+__ptext30 1422 0 CODE 0 text30 dist/default/production\PIC.X.X.production.o
+__ptext31 2202 0 CODE 0 text31 dist/default/production\PIC.X.X.production.o
+__ptext32 1598 0 CODE 0 text32 dist/default/production\PIC.X.X.production.o
+__ptext33 8B8 0 CODE 0 text33 dist/default/production\PIC.X.X.production.o
+__ptext34 2B2C 0 CODE 0 text34 dist/default/production\PIC.X.X.production.o
+__ptext35 2310 0 CODE 0 text35 dist/default/production\PIC.X.X.production.o
+__ptext36 2D04 0 CODE 0 text36 dist/default/production\PIC.X.X.production.o
+__ptext37 1D68 0 CODE 0 text37 dist/default/production\PIC.X.X.production.o
+__ptext38 2E18 0 CODE 0 text38 dist/default/production\PIC.X.X.production.o
+__ptext39 29F0 0 CODE 0 text39 dist/default/production\PIC.X.X.production.o
+__ptext40 2C2A 0 CODE 0 text40 dist/default/production\PIC.X.X.production.o
+__ptext41 19A0 0 CODE 0 text41 dist/default/production\PIC.X.X.production.o
+__ptext42 2526 0 CODE 0 text42 dist/default/production\PIC.X.X.production.o
+__ptext43 241C 0 CODE 0 text43 dist/default/production\PIC.X.X.production.o
+__ptext44 20F2 0 CODE 0 text44 dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlEPService 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_configDescriptor1 856 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__end_of_USBSuspend 3008 0 CODE 0 text20 dist/default/production\PIC.X.X.production.o
+__pintcode_body 2702 0 CODE 0 intcode_body dist/default/production\PIC.X.X.production.o
+___lwdiv 2BB4 0 CODE 0 text11 dist/default/production\PIC.X.X.production.o
+___lwmod 2C9E 0 CODE 0 text10 dist/default/production\PIC.X.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PIC.X.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\PIC.X.X.production.o
+_USB_CD_Ptr 811 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__CFG_BOR$ON 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_ep_data_in 87 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+_buzzerCounter 35 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBActiveConfiguration 52 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBCtrlEPAllowStatusStage 2526 0 CODE 0 text42 dist/default/production\PIC.X.X.production.o
+__size_of_USBConfigureEndpoint 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\PIC.X.X.production.o
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\PIC.X.X.production.o
+___wmul@multiplier 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_LATCbits F8B 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBTransferOnePacket 1C26 0 CODE 0 text14 dist/default/production\PIC.X.X.production.o
+main@scoreBuffer 140 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+_RemoteWakeup 43 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\PIC.X.X.production.o
+i2USBDeviceInit@i D 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+___lwdiv@divisor 9E 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+main@j_343 14E 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
+__end_of_USBDeviceAttach 2EA6 0 CODE 0 text6 dist/default/production\PIC.X.X.production.o
+__end_of_USBDeviceTasks 110E 0 CODE 0 text17 dist/default/production\PIC.X.X.production.o
+_ep_data_out 84 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\PIC.X.X.production.o
+i2_USBDeviceInit 1856 0 CODE 0 text18 dist/default/production\PIC.X.X.production.o
+USBEnableEndpoint@p A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_dummy_encapsulated_cmd_response 94 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+putUSBUSART@length 9E 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+stackhi 3FF 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\sgrk.o
+stacklo 15C 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\sgrk.o
+_cdc_mem_type 90 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__end_of_USBConfigureEndpoint 2A9C 0 CODE 0 text39 dist/default/production\PIC.X.X.production.o
+_USBCtrlEPAllowDataStage 293C 0 CODE 0 text27 dist/default/production\PIC.X.X.production.o
+__Lintcode 8 0 CODE 0 intcode dist/default/production\PIC.X.X.production.o
+__Lintret 0 0 ABS 0 intret dist/default/production\PIC.X.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\PIC.X.X.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlEPAllowDataStage 29F0 0 CODE 0 text27 dist/default/production\PIC.X.X.production.o
+putUSBUSART@data 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_initTimer0 303E 0 CODE 0 text7 dist/default/production\PIC.X.X.production.o
+getsUSBUSART@len A9 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+_initUSBLib 3030 0 CODE 0 text3 dist/default/production\PIC.X.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__pbssCOMRAM 2B 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__end_ofi2_USBTransferOnePacket 1EA6 0 CODE 0 text37 dist/default/production\PIC.X.X.production.o
+__size_of_memcpy 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_memset 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USBCtrlTrfOutHandler 2C2A 0 CODE 0 text40 dist/default/production\PIC.X.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\PIC.X.X.production.o
+_PIR2bits FA1 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+getsUSBUSART@buffer A7 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+USBStdSetCfgHandler@i 15 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+end_of_initialization 2F40 0 CODE 0 cinit dist/default/production\PIC.X.X.production.o
+__size_of_USBStdSetCfgHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\PIC.X.X.production.o
+__Hintentry 0 0 ABS 0 intentry dist/default/production\PIC.X.X.production.o
+_USBDeferStatusStagePacket 3E 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_CDCInitEP 2D68 0 CODE 0 text36 dist/default/production\PIC.X.X.production.o
+_USER_USB_CALLBACK_EVENT_HANDLER 2B2C 0 CODE 0 text34 dist/default/production\PIC.X.X.production.o
+___lwdiv@dividend 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__size_of_CDCInitEP 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+?___lwdiv 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+?___lwmod A3 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\PIC.X.X.production.o
+_inPipes 68 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+_shortPacketStatus 45 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__end_of_USB_CD_Ptr 813 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+USBTransferOnePacket@ep A4 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\PIC.X.X.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\PIC.X.X.production.o
+_endpoint_number 41 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\PIC.X.X.production.o
+USBConfigureEndpoint@EPNum 6 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\PIC.X.X.production.o
+_USB_SD_Ptr 80B 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__pcinit 2F1C 0 CODE 0 cinit dist/default/production\PIC.X.X.production.o
+__ptext0 C14 0 CODE 0 text0 dist/default/production\PIC.X.X.production.o
+__ptext1 2FB0 0 CODE 0 text1 dist/default/production\PIC.X.X.production.o
+__ptext2 2EE4 0 CODE 0 text2 dist/default/production\PIC.X.X.production.o
+__ptext3 3030 0 CODE 0 text3 dist/default/production\PIC.X.X.production.o
+__ptext4 170C 0 CODE 0 text4 dist/default/production\PIC.X.X.production.o
+__ptext5 12AA 0 CODE 0 text5 dist/default/production\PIC.X.X.production.o
+__ptext6 2E64 0 CODE 0 text6 dist/default/production\PIC.X.X.production.o
+__ptext7 303E 0 CODE 0 text7 dist/default/production\PIC.X.X.production.o
+__ptext8 27CC 0 CODE 0 text8 dist/default/production\PIC.X.X.production.o
+__ptext9 1EA6 0 CODE 0 text9 dist/default/production\PIC.X.X.production.o
+_USBDeviceAttach 2E64 0 CODE 0 text6 dist/default/production\PIC.X.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\PIC.X.X.production.o
+__size_of_USBCheckStdRequest 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_USBIncrement1msInternalTimers 2F80 0 CODE 0 text22 dist/default/production\PIC.X.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\PIC.X.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\PIC.X.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\PIC.X.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\PIC.X.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\PIC.X.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\PIC.X.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\PIC.X.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\PIC.X.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\PIC.X.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\PIC.X.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\PIC.X.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\PIC.X.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production\PIC.X.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\PIC.X.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\PIC.X.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production\PIC.X.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production\PIC.X.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production\PIC.X.X.production.o
+__Ltext29 0 0 ABS 0 text29 dist/default/production\PIC.X.X.production.o
+__Ltext30 0 0 ABS 0 text30 dist/default/production\PIC.X.X.production.o
+__Ltext31 0 0 ABS 0 text31 dist/default/production\PIC.X.X.production.o
+__Ltext32 0 0 ABS 0 text32 dist/default/production\PIC.X.X.production.o
+__Ltext33 0 0 ABS 0 text33 dist/default/production\PIC.X.X.production.o
+__Ltext34 0 0 ABS 0 text34 dist/default/production\PIC.X.X.production.o
+__Ltext35 0 0 ABS 0 text35 dist/default/production\PIC.X.X.production.o
+__Ltext36 0 0 ABS 0 text36 dist/default/production\PIC.X.X.production.o
+__Ltext37 0 0 ABS 0 text37 dist/default/production\PIC.X.X.production.o
+__Ltext38 0 0 ABS 0 text38 dist/default/production\PIC.X.X.production.o
+__Ltext39 0 0 ABS 0 text39 dist/default/production\PIC.X.X.production.o
+__Ltext40 0 0 ABS 0 text40 dist/default/production\PIC.X.X.production.o
+__Ltext41 0 0 ABS 0 text41 dist/default/production\PIC.X.X.production.o
+__Ltext42 0 0 ABS 0 text42 dist/default/production\PIC.X.X.production.o
+__Ltext43 0 0 ABS 0 text43 dist/default/production\PIC.X.X.production.o
+__Ltext44 0 0 ABS 0 text44 dist/default/production\PIC.X.X.production.o
+__end_of_USBCheckCDCRequest 241C 0 CODE 0 text35 dist/default/production\PIC.X.X.production.o
+__end_of_USBCtrlTrfInHandler 2526 0 CODE 0 text43 dist/default/production\PIC.X.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\eugen\AppData\Local\Temp\sgrk.o
+_CDCInitEP 2D04 0 CODE 0 text36 dist/default/production\PIC.X.X.production.o
+_USBCtrlEPServiceComplete 1C26 0 CODE 0 text26 dist/default/production\PIC.X.X.production.o
+__Lpowerup E 0 CODE 0 powerup dist/default/production\PIC.X.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PIC.X.X.production.o
+_configDescriptor1 813 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_currentState 93 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+USBStdFeatureReqHandler@current_ep_data 19 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_pBDTEntryEP0OutCurrent 33 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+USBTransferOnePacket@data 9D 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\PIC.X.X.production.o
+_pBDTEntryOut 74 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__end_of_initTimer0 304C 0 CODE 0 text7 dist/default/production\PIC.X.X.production.o
+__end_of_initUSBLib 303E 0 CODE 0 text3 dist/default/production\PIC.X.X.production.o
+___param_bank 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USBStdSetCfgHandler 2618 0 CODE 0 text29 dist/default/production\PIC.X.X.production.o
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PIC.X.X.production.o
+__end_of__initialization 2F40 0 CODE 0 cinit dist/default/production\PIC.X.X.production.o
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_mainISR 8 0 CODE 0 intcode dist/default/production\PIC.X.X.production.o
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\PIC.X.X.production.o
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_USBWakeFromSuspend 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_ofi2_USBDeviceInit 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBCtrlTrfTxService@byteToSend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+_USTATcopy 51 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\PIC.X.X.production.o
+__size_of_isUSBReady 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_FOSC$HSPLL_HS 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_ofmain@msg 8B6 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_USBCheckCDCRequest 2310 0 CODE 0 text35 dist/default/production\PIC.X.X.production.o
+_outPipes 60 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__size_of_USBCtrlTrfSetupHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USBStatusStageTimeoutCounter 3F 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__end_of_USB_SD_Ptr 811 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__end_of_main EE6 0 CODE 0 text0 dist/default/production\PIC.X.X.production.o
+__pintcode 8 0 CODE 0 intcode dist/default/production\PIC.X.X.production.o
+__end_of_putUSBUSART 2FDC 0 CODE 0 text1 dist/default/production\PIC.X.X.production.o
+_CMCON FB4 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_PORTA F80 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_PORTD F83 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_T0CON FD5 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_TMR0L FD6 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_TRISA F92 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_TRISD F95 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_UADDR F6E 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USTAT F6C 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__end_of_sd000 8B2 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__end_of_sd001 87C 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__end_of_sd002 89C 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\PIC.X.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\PIC.X.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\PIC.X.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\PIC.X.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\PIC.X.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\PIC.X.X.production.o
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_USBStdGetStatusHandler 2202 0 CODE 0 text31 dist/default/production\PIC.X.X.production.o
+_USBDeferINDataStagePackets 3B 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+i2USBTransferOnePacket@dir 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+i2USBTransferOnePacket@len 4 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+_sd000 8AE 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_sd001 856 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_sd002 87C 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+_score 8E 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__size_of_USBSuspend 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__initialization 2F1C 0 CODE 0 cinit dist/default/production\PIC.X.X.production.o
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
+__pbssBANK1 152 0 BANK1 1 bssBANK1 dist/default/production\PIC.X.X.production.o
+__size_of_USBDeviceAttach 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBDeviceTasks@i 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__size_of_USER_USB_CALLBACK_EVENT_HANDLER 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+USBConfigureEndpoint@direction 1 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\PIC.X.X.production.o
+___wmul@product A0 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Hsmallconst 8B8 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\PIC.X.X.production.o
+CDCTxService@byte_to_send A8 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PIC.X.X.production.o
+__size_of_USBStdFeatureReqHandler 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
+__Hintcode E 0 CODE 0 intcode dist/default/production\PIC.X.X.production.o
+_USBStatusStageEnabledFlag1 3D 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+_USBStatusStageEnabledFlag2 3C 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
+i2USBTransferOnePacket@handle A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_CtrlTrfData 1 450 20
+_SetupPkt 1 430 8
+_cdc_data_rx 1 540 40
+_cdc_data_tx 1 500 40
+_BDT 1 400 30
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text33 0 8B8 8B8 2794 1
+cstackCOMRAM 1 1 1 53 1
+cstackBANK1 1 100 100 5C 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 50 1
+intcode 0 8 8 A 1
+smallconst 0 800 800 B8 1
+config 0 300000 300000 E 1
+# OTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by OTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

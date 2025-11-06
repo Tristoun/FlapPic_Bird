@@ -9,70 +9,45 @@
 # 1 "main.c" 2
 # 1 "./sysconfig.h" 1
 
-
-
-
 #pragma config PLLDIV = 2
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 2
-
-
 #pragma config FOSC = HSPLL_HS
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
-
-
 #pragma config PWRT = OFF
-#pragma config BOR = OFF
+#pragma config BOR = ON
 #pragma config BORV = 3
 #pragma config VREGEN = ON
-
-
 #pragma config WDT = OFF
 #pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = ON
-#pragma config LPT1OSC = OFF
 #pragma config MCLRE = ON
-
-
+#pragma config LPT1OSC = OFF
+#pragma config PBADEN = OFF
+#pragma config CCP2MX = ON
 #pragma config STVREN = ON
 #pragma config LVP = OFF
-#pragma config ICPRT = OFF
 #pragma config XINST = OFF
-
-
 #pragma config CP0 = OFF
 #pragma config CP1 = OFF
 #pragma config CP2 = OFF
 #pragma config CP3 = OFF
-
-
 #pragma config CPB = OFF
 #pragma config CPD = OFF
-
-
 #pragma config WRT0 = OFF
 #pragma config WRT1 = OFF
 #pragma config WRT2 = OFF
 #pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
 #pragma config WRTB = OFF
+#pragma config WRTC = OFF
 #pragma config WRTD = OFF
-
-
 #pragma config EBTR0 = OFF
 #pragma config EBTR1 = OFF
 #pragma config EBTR2 = OFF
 #pragma config EBTR3 = OFF
-
-
 #pragma config EBTRB = OFF
-# 2 "main.c" 2
+# 1 "main.c" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5684,7 +5659,8 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 3 "main.c" 2
+# 2 "main.c" 2
+
 # 1 "./usb_cdc_lib.h" 1
 
 
@@ -6791,71 +6767,211 @@ extern LINE_CODING line_coding;
 
 extern volatile CTRL_TRF_SETUP SetupPkt;
 extern const uint8_t configDescriptor1[];
-# 14 "./usb_cdc_lib.h" 2
+# 13 "./usb_cdc_lib.h" 2
+
 
 void initUSBLib(void);
 unsigned char isUSBReady(void);
 
 __attribute__((inline)) void processUSBTasks(void);
-# 4 "main.c" 2
+# 3 "main.c" 2
+
 
 
 
 
 volatile unsigned char currentState = 0;
+volatile unsigned char buzzerActive = 0;
+volatile unsigned int buzzerCounter = 0;
+volatile unsigned int score = 0;
 
-void __attribute__((picinterrupt(("")))) mainISR(void)
+
+const unsigned char DIGIT_MAP[10] = {
+    0b00111111,
+    0b00000110,
+    0b01011011,
+    0b01001111,
+    0b01100110,
+    0b01101101,
+    0b01111101,
+    0b00000111,
+    0b01111111,
+    0b01101111
+};
+
+void __attribute__((picinterrupt(("high_priority")))) mainISR(void)
 {
     processUSBTasks();
+
+
+    if (INTCONbits.TMR0IF)
+    {
+        INTCONbits.TMR0IF = 0;
+        TMR0L = 61;
+
+        if (buzzerActive)
+        {
+            buzzerCounter++;
+
+            LATCbits.LATC2 = ~LATCbits.LATC2;
+
+
+            if (buzzerCounter >= 200)
+            {
+                buzzerActive = 0;
+                buzzerCounter = 0;
+                LATCbits.LATC2 = 0;
+            }
+        }
+    }
+}
+
+void initTimer0(void)
+{
+    T0CON = 0b11000111;
+    TMR0L = 61;
+    INTCONbits.TMR0IE = 1;
+    INTCONbits.TMR0IF = 0;
+}
+
+void displayScore(unsigned int score)
+{
+
+    unsigned char units = score % 10;
+    unsigned char tens = (score / 10) % 10;
+    unsigned char hundreds = (score / 100) % 10;
+
+
+
+
+
+    if (score >= 100) {
+        LATA = 0x01;
+        LATD = DIGIT_MAP[hundreds];
+        _delay((unsigned long)((3)*(48000000/4000.0)));
+    }
+
+
+    if (score >= 10) {
+        LATA = 0x02;
+        LATD = DIGIT_MAP[tens];
+        _delay((unsigned long)((3)*(48000000/4000.0)));
+    }
+
+
+    LATA = 0x04;
+    LATD = DIGIT_MAP[units];
+    _delay((unsigned long)((3)*(48000000/4000.0)));
 }
 
 void main(void)
 {
+
     ADCON1 = 0x0F;
+    CMCON = 0x07;
+
     TRISBbits.TRISB0 = 1;
+    TRISCbits.TRISC2 = 0;
     TRISD = 0x00;
     TRISA = 0x00;
-    PORTA = 0x01;
+
+    PORTA = 0x04;
     PORTD = 0x00;
+    LATA = 0x04;
+    LATD = DIGIT_MAP[0];
+    LATCbits.LATC2 = 0;
+
+
+    _delay((unsigned long)((100)*(48000000/4000.0)));
+
 
     initUSBLib();
 
+
+    while (!isUSBReady())
+    {
+        CDCTxService();
+        _delay((unsigned long)((10)*(48000000/4000.0)));
+    }
+
+
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
+
+    initTimer0();
+
     unsigned char lastState = 0;
+    uint8_t rxBuffer[64];
+    uint8_t rxLength = 0;
+    unsigned char scoreBuffer[10];
+    unsigned char scoreIndex = 0;
 
     while (1)
     {
 
-        __asm("movf PORTB, W");
-        __asm("andlw 0x01");
-        __asm("movwf _currentState");
+        CDCTxService();
 
-        _delay((unsigned long)((10)*(48000000/4000.0)));
+
+        displayScore(score);
+
+
+        currentState = PORTBbits.RB0;
 
         if (currentState != lastState)
         {
             lastState = currentState;
-
             if (currentState)
             {
-
-                __asm("movlw 0b01110111");
-                __asm("movwf PORTD");
-
-
                 if (isUSBReady())
                 {
                     const char msg[] = "1\r\n";
-                    putUSBUSART((uint8_t*)msg, sizeof(msg) - 1);
+                    putUSBUSART((uint8_t *)msg, sizeof(msg) - 1);
+                    CDCTxService();
                 }
-                CDCTxService();
-            }
-            else
-            {
-
-                __asm("clrf PORTD");
             }
         }
 
-        CDCTxService();
+
+        if (isUSBReady())
+        {
+            rxLength = getsUSBUSART(rxBuffer, sizeof(rxBuffer));
+            if (rxLength > 0)
+            {
+                for (uint8_t i = 0; i < rxLength; i++)
+                {
+
+                    if (rxBuffer[i] == 'B')
+                    {
+                        buzzerActive = 1;
+                        buzzerCounter = 0;
+                    }
+
+                    else if (rxBuffer[i] == 'S')
+                    {
+                        scoreIndex = 0;
+
+                        for (uint8_t j = 0; j < 10; j++)
+                            scoreBuffer[j] = 0;
+                    }
+
+                    else if (rxBuffer[i] >= '0' && rxBuffer[i] <= '9')
+                    {
+                        scoreBuffer[scoreIndex++] = rxBuffer[i];
+                    }
+
+                    else if (rxBuffer[i] == '\n' && scoreIndex > 0)
+                    {
+
+                        unsigned int newScore = 0;
+                        for (uint8_t j = 0; j < scoreIndex; j++)
+                        {
+                            newScore = newScore * 10 + (scoreBuffer[j] - '0');
+                        }
+                        score = newScore;
+                        scoreIndex = 0;
+                    }
+                }
+            }
+        }
     }
 }
