@@ -16,7 +16,7 @@ FPS = 17
 WIDTH = 700
 HEIGHT = 900
 
-MODE = "PIC" #Can be PIC or KEYBOARD
+MODE = "KEY" #Can be PIC or KEYBOARD
 
 pygame.mixer.init()
 
@@ -60,6 +60,7 @@ class Game:
         self.text = str(self.score)
 
         self.bouton_start = ""
+        self.instruction = None
 
         self.speed = 1
 
@@ -77,6 +78,7 @@ class Game:
         if(self.reader.last_value == 1) :
             return True
         return False
+            
 
     def launch_game(self) :
         if(self.state == GameState.RUN) :
@@ -110,7 +112,11 @@ class Game:
 
     def menu(self) :
         if(self.state == GameState.MENU) :
-            self.bouton_start =  Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2-14)
+
+            #Ajout du bouton instructions et du bouton replay
+            self.instruction = Bouton(self.canvas, size=(470, 600), path="images/images/carre_mode.png", x=WIDTH/2-230, y=HEIGHT/2-300)
+            self.bouton_start =  Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2+120)
+
             self.score = 0
             self.text = "0"
             self.text_box = None
@@ -175,7 +181,7 @@ class Game:
 
 
     def pipes_move(self) :
-        
+
         if(self.state == GameState.RUN) :
             lst_delete = []
 
@@ -231,6 +237,7 @@ class Game:
     def launch_game_PIC(self) :
         self.state = GameState.RUN
         self.canvas.delete(self.bouton_start.id)
+        self.canvas.delete(self.instruction.id)
         self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png", size=(60,55))
         self.score = 0
         # self.text_box = None
@@ -248,6 +255,7 @@ class Game:
             if(event.x >= self.bouton_start.x and event.x <= self.bouton_start.x + self.bouton_start.size[0] and event.y >= self.bouton_start.y and event.y <= self.bouton_start.y + self.bouton_start.size[1]) :
                 self.state = GameState.RUN
                 self.canvas.delete(self.bouton_start.id)
+                self.canvas.delete(self.instruction.id)
                 self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png", size=(60,55))
                 self.score = 0
                 # self.text_box = None
