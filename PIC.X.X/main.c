@@ -69,9 +69,9 @@ void displayScore(unsigned int score)
     // Afficher sur les 3 premiers afficheurs
     // Note: sur EasyPIC, PORTA contrôle quel afficheur est actif (DIS0-DIS3)
     
-    // Afficher centaines sur DIS0
+    // Afficher centaines sur DIS2
     if (score >= 100) {
-        LATA = 0x01; // Activer DIS0
+        LATA = 0x04; // Activer DIS2
         LATD = DIGIT_MAP[hundreds];
         __delay_ms(3);
     }
@@ -83,8 +83,8 @@ void displayScore(unsigned int score)
         __delay_ms(3);
     }
     
-    // Afficher unités sur DIS2
-    LATA = 0x04; // Activer DIS2
+    // Afficher unités sur DIS0
+    LATA = 0x01; // Activer DIS0
     LATD = DIGIT_MAP[units];
     __delay_ms(3);
 }
@@ -100,9 +100,10 @@ void main(void)
     TRISD = 0x00;         // Afficheur en sortie
     TRISA = 0x00;         // PORTA en sortie (sélection afficheurs)
 
-    PORTA = 0x04; // Activer DIS2 (unités) par défaut
+    PORTA = 0x01; // Activer DIS0 (unités) par défaut
     PORTD = 0x00;
-    LATA = 0x04;
+    LATA = 0x01
+            ;
     LATD = DIGIT_MAP[0]; // Afficher 0 au démarrage
     BUZZER_PIN = 0; // Buzzer éteint
 
@@ -140,7 +141,7 @@ void main(void)
         displayScore(score);
 
         // Lecture bouton RB0
-        currentState = PORTBbits.RB0;
+        currentState = PORTEbits.RE0;
 
         if (currentState != lastState)
         {

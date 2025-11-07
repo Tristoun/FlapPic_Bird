@@ -277,7 +277,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(a  1 e 1 0 ]
 "374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _UIR UIR `VEuc  1 e 1 @3944 ]
-[s S837 . 1 `uc 1 URSTIF 1 0 :1:0 
+[s S857 . 1 `uc 1 URSTIF 1 0 :1:0 
 `uc 1 UERRIF 1 0 :1:1 
 `uc 1 ACTVIF 1 0 :1:2 
 `uc 1 TRNIF 1 0 :1:3 
@@ -286,11 +286,11 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIF 1 0 :1:6 
 ]
 "390
-[u S845 . 1 `S837 1 . 1 0 ]
-[v _UIRbits UIRbits `VES845  1 e 1 @3944 ]
+[u S865 . 1 `S857 1 . 1 0 ]
+[v _UIRbits UIRbits `VES865  1 e 1 @3944 ]
 "430
 [v _UIE UIE `VEuc  1 e 1 @3945 ]
-[s S856 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S876 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -299,8 +299,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "446
-[u S864 . 1 `S856 1 . 1 0 ]
-[v _UIEbits UIEbits `VES864  1 e 1 @3945 ]
+[u S884 . 1 `S876 1 . 1 0 ]
+[v _UIEbits UIEbits `VES884  1 e 1 @3945 ]
 "486
 [v _UEIR UEIR `VEuc  1 e 1 @3946 ]
 "537
@@ -309,7 +309,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USTAT USTAT `VEuc  1 e 1 @3948 ]
 "648
 [v _UCON UCON `VEuc  1 e 1 @3949 ]
-[s S448 . 1 `uc 1 . 1 0 :1:0 
+[s S468 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 SUSPND 1 0 :1:1 
 `uc 1 RESUME 1 0 :1:2 
 `uc 1 USBEN 1 0 :1:3 
@@ -318,64 +318,74 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 PPBRST 1 0 :1:6 
 ]
 "664
-[u S456 . 1 `S448 1 . 1 0 ]
-[v _UCONbits UCONbits `VES456  1 e 1 @3949 ]
+[u S476 . 1 `S468 1 . 1 0 ]
+[v _UCONbits UCONbits `VES476  1 e 1 @3949 ]
 "699
 [v _UADDR UADDR `VEuc  1 e 1 @3950 ]
 "763
 [v _UCFG UCFG `VEuc  1 e 1 @3951 ]
 "842
 [v _UEP0 UEP0 `VEuc  1 e 1 @3952 ]
-[s S1026 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S1046 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "870
-[s S1032 . 1 `uc 1 EP0STALL 1 0 :1:0 
+[s S1052 . 1 `uc 1 EP0STALL 1 0 :1:0 
 `uc 1 EP0INEN 1 0 :1:1 
 `uc 1 EP0OUTEN 1 0 :1:2 
 `uc 1 EP0CONDIS 1 0 :1:3 
 `uc 1 EP0HSHK 1 0 :1:4 
 ]
-[s S1038 . 1 `uc 1 EPSTALL0 1 0 :1:0 
+[s S1058 . 1 `uc 1 EPSTALL0 1 0 :1:0 
 `uc 1 EPINEN0 1 0 :1:1 
 `uc 1 EPOUTEN0 1 0 :1:2 
 `uc 1 EPCONDIS0 1 0 :1:3 
 `uc 1 EPHSHK0 1 0 :1:4 
 ]
-[u S1044 . 1 `S1026 1 . 1 0 `S1032 1 . 1 0 `S1038 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES1044  1 e 1 @3952 ]
+[u S1064 . 1 `S1046 1 . 1 0 `S1052 1 . 1 0 `S1058 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES1064  1 e 1 @3952 ]
 "950
 [v _UEP1 UEP1 `VEuc  1 e 1 @3953 ]
 "2314
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
-[s S131 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-"2483
-[s S219 . 1 `uc 1 INT0 1 0 :1:0 
-`uc 1 INT1 1 0 :1:1 
-`uc 1 INT2 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 PGM 1 0 :1:5 
-`uc 1 PGC 1 0 :1:6 
-`uc 1 PGD 1 0 :1:7 
-]
-[s S227 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 CCP2_PA2 1 0 :1:3 
-]
-[u S230 . 1 `S131 1 . 1 0 `S219 1 . 1 0 `S227 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES230  1 e 1 @3969 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S210 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 RDPU 1 0 :1:7 
+]
+"2868
+[s S217 . 1 `uc 1 CK1SPP 1 0 :1:0 
+`uc 1 CK2SPP 1 0 :1:1 
+`uc 1 OESPP 1 0 :1:2 
+]
+[s S221 . 1 `uc 1 PD2 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S228 . 1 `uc 1 RDE 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+`uc 1 CS 1 0 :1:2 
+`uc 1 PC3E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S235 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RE7 1 0 :1:7 
+]
+[u S240 . 1 `S210 1 . 1 0 `S217 1 . 1 0 `S221 1 . 1 0 `S228 1 . 1 0 `S235 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES240  1 e 1 @3972 ]
 "2973
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 [s S79 . 1 `uc 1 LATC0 1 0 :1:0 
@@ -409,6 +419,15 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "3657
+[s S131 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
 [u S140 . 1 `S122 1 . 1 0 `S131 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES140  1 e 1 @3987 ]
 [s S162 . 1 `uc 1 TRISC0 1 0 :1:0 
@@ -430,7 +449,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _TRISCbits TRISCbits `VES176  1 e 1 @3988 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S379 . 1 `uc 1 CCP2IE 1 0 :1:0 
+[s S399 . 1 `uc 1 CCP2IE 1 0 :1:0 
 `uc 1 TMR3IE 1 0 :1:1 
 `uc 1 HLVDIE 1 0 :1:2 
 `uc 1 BCLIE 1 0 :1:3 
@@ -440,12 +459,12 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 OSCFIE 1 0 :1:7 
 ]
 "4657
-[s S388 . 1 `uc 1 . 1 0 :2:0 
+[s S408 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LVDIE 1 0 :1:2 
 ]
-[u S391 . 1 `S379 1 . 1 0 `S388 1 . 1 0 ]
-[v _PIE2bits PIE2bits `VES391  1 e 1 @4000 ]
-[s S407 . 1 `uc 1 CCP2IF 1 0 :1:0 
+[u S411 . 1 `S399 1 . 1 0 `S408 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES411  1 e 1 @4000 ]
+[s S427 . 1 `uc 1 CCP2IF 1 0 :1:0 
 `uc 1 TMR3IF 1 0 :1:1 
 `uc 1 HLVDIF 1 0 :1:2 
 `uc 1 BCLIF 1 0 :1:3 
@@ -455,12 +474,12 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 OSCFIF 1 0 :1:7 
 ]
 "4728
-[s S416 . 1 `uc 1 . 1 0 :2:0 
+[s S436 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LVDIF 1 0 :1:2 
 ]
-[u S419 . 1 `S407 1 . 1 0 `S416 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES419  1 e 1 @4001 ]
-[s S967 . 1 `uc 1 CCP2IP 1 0 :1:0 
+[u S439 . 1 `S427 1 . 1 0 `S436 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES439  1 e 1 @4001 ]
+[s S987 . 1 `uc 1 CCP2IP 1 0 :1:0 
 `uc 1 TMR3IP 1 0 :1:1 
 `uc 1 HLVDIP 1 0 :1:2 
 `uc 1 BCLIP 1 0 :1:3 
@@ -470,11 +489,11 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 OSCFIP 1 0 :1:7 
 ]
 "4799
-[s S976 . 1 `uc 1 . 1 0 :2:0 
+[s S996 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LVDIP 1 0 :1:2 
 ]
-[u S979 . 1 `S967 1 . 1 0 `S976 1 . 1 0 ]
-[v _IPR2bits IPR2bits `VES979  1 e 1 @4002 ]
+[u S999 . 1 `S987 1 . 1 0 `S996 1 . 1 0 ]
+[v _IPR2bits IPR2bits `VES999  1 e 1 @4002 ]
 "5587
 [v _CMCON CMCON `VEuc  1 e 1 @4020 ]
 "6581
@@ -518,20 +537,20 @@ EVENT_TRANSFER_TERMINATED 5
 [v _score score `VEui  1 e 2 0 ]
 "14
 [v _DIGIT_MAP DIGIT_MAP `C[10]uc  1 e 10 0 ]
-[s S495 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `us 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `us 1 idVendor 2 8 `us 1 idProduct 2 10 `us 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+[s S515 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `us 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `us 1 idVendor 2 8 `us 1 idProduct 2 10 `us 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
 "155 C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_descriptors.c
-[v _device_dsc device_dsc `CS495  1 e 18 0 ]
+[v _device_dsc device_dsc `CS515  1 e 18 0 ]
 "174
 [v _configDescriptor1 configDescriptor1 `C[67]uc  1 e 67 0 ]
-[s S532 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
+[s S552 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
 "259
-[v _sd000 sd000 `CS532  1 e 4 0 ]
-[s S536 . 38 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[18]us 1 string 36 2 ]
+[v _sd000 sd000 `CS552  1 e 4 0 ]
+[s S556 . 38 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[18]us 1 string 36 2 ]
 "263
-[v _sd001 sd001 `CS536  1 e 38 0 ]
-[s S540 . 32 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[15]us 1 string 30 2 ]
+[v _sd001 sd001 `CS556  1 e 38 0 ]
+[s S560 . 32 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[15]us 1 string 30 2 ]
 "269
-[v _sd002 sd002 `CS540  1 e 32 0 ]
+[v _sd002 sd002 `CS560  1 e 32 0 ]
 "275
 [v _USB_CD_Ptr USB_CD_Ptr `C[1]*.25Cuc  1 e 2 0 ]
 "281
@@ -542,7 +561,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
 "143
 [v _USBAlternateInterface USBAlternateInterface `VE[2]uc  1 e 2 0 ]
-[s S584 . 1 `uc 1 BC8 1 0 :1:0 
+[s S604 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -552,80 +571,80 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "144
-[s S593 . 1 `uc 1 . 1 0 :2:0 
+[s S613 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S600 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S604 _BD_STAT 1 `uc 1 Val 1 0 `S584 1 . 1 0 `S593 1 . 1 0 `S600 1 . 1 0 ]
-[s S609 . 4 `S604 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S614 . 4 `uc 1 . 1 0 :8:0 
+[u S624 _BD_STAT 1 `uc 1 Val 1 0 `S604 1 . 1 0 `S613 1 . 1 0 `S620 1 . 1 0 ]
+[s S629 . 4 `S624 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S634 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `us 1 ADR 2 2 ]
-[u S618 __BDT 4 `S609 1 . 4 0 `S614 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES618  1 e 2 0 ]
+[u S638 __BDT 4 `S629 1 . 4 0 `S634 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES638  1 e 2 0 ]
 "145
-[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES618  1 e 2 0 ]
+[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES638  1 e 2 0 ]
 "146
-[v _pBDTEntryOut pBDTEntryOut `[3]*.39VES618  1 e 6 0 ]
+[v _pBDTEntryOut pBDTEntryOut `[3]*.39VES638  1 e 6 0 ]
 "147
-[v _pBDTEntryIn pBDTEntryIn `[3]*.39VES618  1 e 6 0 ]
+[v _pBDTEntryIn pBDTEntryIn `[3]*.39VES638  1 e 6 0 ]
 "148
 [v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
 "149
 [v _controlTransferState controlTransferState `VEuc  1 e 1 0 ]
-[u S623 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2us 1 wRam 3 0 `*.2Cus 1 wRom 3 0 ]
+[u S643 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2us 1 wRam 3 0 `*.2Cus 1 wRom 3 0 ]
 "150
-[s S628 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
+[s S648 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
 `uc 1 reserved 1 0 :5:1 
 `uc 1 includeZero 1 0 :1:6 
 `uc 1 busy 1 0 :1:7 
 ]
-[u S633 . 1 `S628 1 bits 1 0 `uc 1 Val 1 0 ]
-[s S636 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
-[u S639 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S636 1 byte 2 0 ]
-[s S643 . 6 `S623 1 pSrc 3 0 `S633 1 info 1 3 `S639 1 wCount 2 4 ]
-[v _inPipes inPipes `VE[1]S643  1 e 6 0 ]
-[u S647 . 3 `*.2uc 1 bRam 3 0 `*.2us 1 wRam 3 0 ]
+[u S653 . 1 `S648 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S656 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[u S659 . 2 `us 1 Val 2 0 `[2]uc 1 v 2 0 `S656 1 byte 2 0 ]
+[s S663 . 6 `S643 1 pSrc 3 0 `S653 1 info 1 3 `S659 1 wCount 2 4 ]
+[v _inPipes inPipes `VE[1]S663  1 e 6 0 ]
+[u S667 . 3 `*.2uc 1 bRam 3 0 `*.2us 1 wRam 3 0 ]
 "151
-[s S650 . 1 `uc 1 reserved 1 0 :7:0 
+[s S670 . 1 `uc 1 reserved 1 0 :7:0 
 `uc 1 busy 1 0 :1:7 
 ]
-[u S653 . 1 `S650 1 bits 1 0 `uc 1 Val 1 0 ]
-[s S657 . 8 `S647 1 pDst 3 0 `S653 1 info 1 3 `S639 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
-[v _outPipes outPipes `VE[1]S657  1 e 8 0 ]
+[u S673 . 1 `S670 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S677 . 8 `S667 1 pDst 3 0 `S673 1 info 1 3 `S659 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
+[v _outPipes outPipes `VE[1]S677  1 e 8 0 ]
 "152
 [v _pDst pDst `*.39VEuc  1 e 2 0 ]
 "153
 [v _RemoteWakeup RemoteWakeup `VEa  1 e 1 0 ]
 "154
 [v _USBBusIsSuspended USBBusIsSuspended `VEa  1 e 1 0 ]
-[s S662 . 1 `uc 1 filler1 1 0 :1:0 
+[s S682 . 1 `uc 1 filler1 1 0 :1:0 
 `uc 1 ping_pong 1 0 :1:1 
 `uc 1 direction 1 0 :1:2 
 `uc 1 endpoint_number 1 0 :4:3 
 ]
 "155
-[u S667 __USTAT 1 `S662 1 . 1 0 `uc 1 Val 1 0 ]
-[v _USTATcopy USTATcopy `VES667  1 e 1 0 ]
+[u S687 __USTAT 1 `S682 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES687  1 e 1 0 ]
 "156
 [v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
 "157
 [v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEa  1 e 1 0 ]
-[s S670 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S690 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "158
-[u S673 . 1 `S670 1 bits 1 0 `uc 1 Val 1 0 ]
-[v _ep_data_in ep_data_in `VE[3]S673  1 e 3 0 ]
+[u S693 . 1 `S690 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[3]S693  1 e 3 0 ]
 "159
-[v _ep_data_out ep_data_out `VE[3]S673  1 e 3 0 ]
+[v _ep_data_out ep_data_out `VE[3]S693  1 e 3 0 ]
 "160
 [v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
 "161
@@ -643,13 +662,13 @@ EVENT_TRANSFER_TERMINATED 5
 "167
 [v _USBTicksSinceSuspendEnd USBTicksSinceSuspendEnd `VEuc  1 e 1 0 ]
 "174
-[v _BDT BDT `VE[12]S618  1 e 48 @1024 ]
-[s S676 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `us 1 wValue 2 2 `us 1 wIndex 2 4 `us 1 wLength 2 6 ]
+[v _BDT BDT `VE[12]S638  1 e 48 @1024 ]
+[s S696 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `us 1 wValue 2 2 `us 1 wIndex 2 4 `us 1 wLength 2 6 ]
 "179
-[s S703 . 8 `uc 1 . 1 0 :8:0 
+[s S723 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
-`S639 1 W_Value 2 2 `S639 1 W_Index 2 4 `S639 1 W_Length 2 6 ]
-[s S709 . 8 `uc 1 Recipient 1 0 :5:0 
+`S659 1 W_Value 2 2 `S659 1 W_Index 2 4 `S659 1 W_Length 2 6 ]
+[s S729 . 8 `uc 1 Recipient 1 0 :5:0 
 `uc 1 RequestType 1 0 :2:5 
 `uc 1 DataDir 1 0 :1:7 
 `uc 1 . 1 1 :8:0 
@@ -659,44 +678,44 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S720 . 1 `uc 1 recipient 1 0 :5:0 
+[s S740 . 1 `uc 1 recipient 1 0 :5:0 
 `uc 1 type 1 0 :2:5 
 `uc 1 direction 1 0 :1:7 
 ]
-[u S724 . 1 `uc 1 bmRequestType 1 0 `S720 1 . 1 0 ]
-[s S727 . 1 `S724 1 requestInfo 1 0 ]
-[s S729 . 8 `uc 1 . 1 0 :8:0 
+[u S744 . 1 `uc 1 bmRequestType 1 0 `S740 1 . 1 0 ]
+[s S747 . 1 `S744 1 requestInfo 1 0 ]
+[s S749 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bDscIndex 1 2 `uc 1 bDescriptorType 1 3 `us 1 wLangID 2 4 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S737 . 8 `uc 1 . 1 0 :8:0 
+[s S757 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bDevADR 1 2 `uc 1 bDevADRH 1 3 `uc 1 . 1 4 :8:0 
 `uc 1 . 1 5 :8:0 
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S746 . 8 `uc 1 . 1 0 :8:0 
+[s S766 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bConfigurationValue 1 2 `uc 1 bCfgRSD 1 3 `uc 1 . 1 4 :8:0 
 `uc 1 . 1 5 :8:0 
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S755 . 8 `uc 1 . 1 0 :8:0 
+[s S775 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 bAltID 1 2 `uc 1 bAltID_H 1 3 `uc 1 bIntfID 1 4 `uc 1 bIntfID_H 1 5 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S764 . 8 `uc 1 . 1 0 :8:0 
+[s S784 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 . 1 2 :8:0 
 `uc 1 . 1 3 :8:0 
 `uc 1 bEPID 1 4 `uc 1 bEPID_H 1 5 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[s S773 . 8 `uc 1 . 1 0 :8:0 
+[s S793 . 8 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `uc 1 . 1 2 :8:0 
 `uc 1 . 1 3 :8:0 
@@ -707,29 +726,29 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 . 1 6 :8:0 
 `uc 1 . 1 7 :8:0 
 ]
-[u S784 . 8 `S676 1 . 8 0 `S703 1 . 8 0 `S709 1 . 8 0 `S727 1 . 1 0 `S729 1 . 8 0 `S737 1 . 8 0 `S746 1 . 8 0 `S755 1 . 8 0 `S764 1 . 8 0 `S773 1 . 8 0 ]
-[v _SetupPkt SetupPkt `VES784  1 e 8 @1072 ]
+[u S804 . 8 `S696 1 . 8 0 `S723 1 . 8 0 `S729 1 . 8 0 `S747 1 . 1 0 `S749 1 . 8 0 `S757 1 . 8 0 `S766 1 . 8 0 `S775 1 . 8 0 `S784 1 . 8 0 `S793 1 . 8 0 ]
+[v _SetupPkt SetupPkt `VES804  1 e 8 @1072 ]
 "180
 [v _CtrlTrfData CtrlTrfData `VE[32]uc  1 e 32 @1104 ]
 "65 C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
 [v _cdc_data_tx cdc_data_tx `VE[64]uc  1 e 64 @1280 ]
 "66
 [v _cdc_data_rx cdc_data_rx `VE[64]uc  1 e 64 @1344 ]
-[s S2146 . 7 `[7]uc 1 _byte 7 0 ]
+[s S2166 . 7 `[7]uc 1 _byte 7 0 ]
 "76
-[s S2148 . 7 `ul 1 dwDTERate 4 0 `uc 1 bCharFormat 1 4 `uc 1 bParityType 1 5 `uc 1 bDataBits 1 6 ]
-[u S2153 _LINE_CODING 7 `S2146 1 . 7 0 `S2148 1 . 7 0 ]
-[v _line_coding line_coding `S2153  1 e 7 0 ]
+[s S2168 . 7 `ul 1 dwDTERate 4 0 `uc 1 bCharFormat 1 4 `uc 1 bParityType 1 5 `uc 1 bDataBits 1 6 ]
+[u S2173 _LINE_CODING 7 `S2166 1 . 7 0 `S2168 1 . 7 0 ]
+[v _line_coding line_coding `S2173  1 e 7 0 ]
 "83
 [v _cdc_rx_len cdc_rx_len `uc  1 e 1 0 ]
 "84
 [v _cdc_trf_state cdc_trf_state `uc  1 e 1 0 ]
-[s S2160 . 2 `uc 1 bLow 1 0 `uc 1 bHigh 1 1 ]
+[s S2180 . 2 `uc 1 bLow 1 0 `uc 1 bHigh 1 1 ]
 "85
-[u S2163 _POINTER 3 `S2160 1 . 2 0 `us 1 _word 2 0 `*.2uc 1 bRam 3 0 `*.2us 1 wRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2Cus 1 wRom 3 0 ]
-[v _pCDCSrc pCDCSrc `S2163  1 e 3 0 ]
+[u S2183 _POINTER 3 `S2180 1 . 2 0 `us 1 _word 2 0 `*.2uc 1 bRam 3 0 `*.2us 1 wRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2Cus 1 wRom 3 0 ]
+[v _pCDCSrc pCDCSrc `S2183  1 e 3 0 ]
 "86
-[v _pCDCDst pCDCDst `S2163  1 e 3 0 ]
+[v _pCDCDst pCDCDst `S2183  1 e 3 0 ]
 "87
 [v _cdc_tx_len cdc_tx_len `uc  1 e 1 0 ]
 "88
@@ -738,38 +757,38 @@ EVENT_TRANSFER_TERMINATED 5
 [v _CDCDataOutHandle CDCDataOutHandle `*.39v  1 e 2 0 ]
 "91
 [v _CDCDataInHandle CDCDataInHandle `*.39v  1 e 2 0 ]
-[s S2170 . 1 `uc 1 DTE_PRESENT 1 0 :1:0 
+[s S2190 . 1 `uc 1 DTE_PRESENT 1 0 :1:0 
 `uc 1 CARRIER_CONTROL 1 0 :1:1 
 ]
 "94
-[u S2173 _CONTROL_SIGNAL_BITMAP 1 `uc 1 _byte 1 0 `S2170 1 . 1 0 ]
-[v _control_signal_bitmap control_signal_bitmap `S2173  1 e 1 0 ]
+[u S2193 _CONTROL_SIGNAL_BITMAP 1 `uc 1 _byte 1 0 `S2190 1 . 1 0 ]
+[v _control_signal_bitmap control_signal_bitmap `S2193  1 e 1 0 ]
 "110
 [v _dummy_encapsulated_cmd_response dummy_encapsulated_cmd_response `[8]uc  1 e 8 0 ]
 "92 C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"191
-[v main@j_343 j `uc  1 a 1 78 ]
-"178
+"192
+[v main@j_363 j `uc  1 a 1 78 ]
+"179
 [v main@j j `uc  1 a 1 79 ]
-"190
+"191
 [v main@newScore newScore `ui  1 a 2 75 ]
-"165
+"166
 [v main@i i `uc  1 a 1 81 ]
-"129
-[v main@rxBuffer rxBuffer `[64]uc  1 a 64 0 ]
-"131
-[v main@scoreBuffer scoreBuffer `[10]uc  1 a 10 64 ]
-"132
-[v main@scoreIndex scoreIndex `uc  1 a 1 80 ]
 "130
+[v main@rxBuffer rxBuffer `[64]uc  1 a 64 0 ]
+"132
+[v main@scoreBuffer scoreBuffer `[10]uc  1 a 10 64 ]
+"133
+[v main@scoreIndex scoreIndex `uc  1 a 1 80 ]
+"131
 [v main@rxLength rxLength `uc  1 a 1 77 ]
-"128
+"129
 [v main@lastState lastState `uc  1 a 1 74 ]
-"152
+"153
 [v main@msg msg `C[4]uc  1 s 4 msg ]
-"202
+"203
 } 0
 "556 C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_cdc.c
 [v _putUSBUSART putUSBUSART `(v  1 e 1 0 ]
@@ -883,7 +902,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
 {
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[s S584 . 1 `uc 1 BC8 1 0 :1:0 
+[s S604 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -893,24 +912,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "1003
-[s S593 . 1 `uc 1 . 1 0 :2:0 
+[s S613 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S600 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S604 _BD_STAT 1 `uc 1 Val 1 0 `S584 1 . 1 0 `S593 1 . 1 0 `S600 1 . 1 0 ]
-[s S609 . 4 `S604 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S614 . 4 `uc 1 . 1 0 :8:0 
+[u S624 _BD_STAT 1 `uc 1 Val 1 0 `S604 1 . 1 0 `S613 1 . 1 0 `S620 1 . 1 0 ]
+[s S629 . 4 `S624 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S634 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `us 1 ADR 2 2 ]
-[u S618 __BDT 4 `S609 1 . 4 0 `S614 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBTransferOnePacket@handle handle `*.39VES618  1 a 2 9 ]
+[u S638 __BDT 4 `S629 1 . 4 0 `S634 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBTransferOnePacket@handle handle `*.39VES638  1 a 2 9 ]
 "1001
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
 [v USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
@@ -1023,7 +1042,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2135 C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
 [v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
 {
-[s S584 . 1 `uc 1 BC8 1 0 :1:0 
+[s S604 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1033,24 +1052,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "2167
-[s S593 . 1 `uc 1 . 1 0 :2:0 
+[s S613 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S600 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S604 _BD_STAT 1 `uc 1 Val 1 0 `S584 1 . 1 0 `S593 1 . 1 0 `S600 1 . 1 0 ]
-[s S609 . 4 `S604 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S614 . 4 `uc 1 . 1 0 :8:0 
+[u S624 _BD_STAT 1 `uc 1 Val 1 0 `S604 1 . 1 0 `S613 1 . 1 0 `S620 1 . 1 0 ]
+[s S629 . 4 `S624 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S634 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `us 1 ADR 2 2 ]
-[u S618 __BDT 4 `S609 1 . 4 0 `S614 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdGetStatusHandler@p p `*.39S618  1 a 2 2 ]
+[u S638 __BDT 4 `S629 1 . 4 0 `S634 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdGetStatusHandler@p p `*.39S638  1 a 2 2 ]
 "2190
 } 0
 "2049
@@ -1061,7 +1080,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2760
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
 {
-[s S584 . 1 `uc 1 BC8 1 0 :1:0 
+[s S604 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1071,32 +1090,32 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "2762
-[s S593 . 1 `uc 1 . 1 0 :2:0 
+[s S613 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S600 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S604 _BD_STAT 1 `uc 1 Val 1 0 `S584 1 . 1 0 `S593 1 . 1 0 `S600 1 . 1 0 ]
-[s S609 . 4 `S604 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S614 . 4 `uc 1 . 1 0 :8:0 
+[u S624 _BD_STAT 1 `uc 1 Val 1 0 `S604 1 . 1 0 `S613 1 . 1 0 `S620 1 . 1 0 ]
+[s S629 . 4 `S624 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S634 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `us 1 ADR 2 2 ]
-[u S618 __BDT 4 `S609 1 . 4 0 `S614 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdFeatureReqHandler@p p `*.39S618  1 a 2 25 ]
+[u S638 __BDT 4 `S629 1 . 4 0 `S634 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdFeatureReqHandler@p p `*.39S638  1 a 2 25 ]
 "2767
 [v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 22 ]
-[s S670 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S690 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2763
-[u S673 . 1 `S670 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S673  1 a 1 24 ]
+[u S693 . 1 `S690 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S693  1 a 1 24 ]
 "2986
 } 0
 "49 C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device_events.c
@@ -1121,7 +1140,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v i2_USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
 {
 [v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[s S584 . 1 `uc 1 BC8 1 0 :1:0 
+[s S604 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1130,24 +1149,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 DTS 1 0 :1:6 
 `uc 1 UOWN 1 0 :1:7 
 ]
-[s S593 . 1 `uc 1 . 1 0 :2:0 
+[s S613 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S600 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S604 _BD_STAT 1 `uc 1 Val 1 0 `S584 1 . 1 0 `S593 1 . 1 0 `S600 1 . 1 0 ]
-[s S609 . 4 `S604 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S614 . 4 `uc 1 . 1 0 :8:0 
+[u S624 _BD_STAT 1 `uc 1 Val 1 0 `S604 1 . 1 0 `S613 1 . 1 0 `S620 1 . 1 0 ]
+[s S629 . 4 `S624 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S634 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `us 1 ADR 2 2 ]
-[u S618 __BDT 4 `S609 1 . 4 0 `S614 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i2USBTransferOnePacket@handle USBTransferOnePacket `*.39VES618  1 a 2 9 ]
+[u S638 __BDT 4 `S629 1 . 4 0 `S634 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i2USBTransferOnePacket@handle USBTransferOnePacket `*.39VES638  1 a 2 9 ]
 [v i2USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
 [v i2USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
 [v i2USBTransferOnePacket@data data `*.39uc  1 p 2 1 ]
@@ -1173,7 +1192,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
 {
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
-[s S584 . 1 `uc 1 BC8 1 0 :1:0 
+[s S604 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1183,24 +1202,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "1551
-[s S593 . 1 `uc 1 . 1 0 :2:0 
+[s S613 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S600 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S604 _BD_STAT 1 `uc 1 Val 1 0 `S584 1 . 1 0 `S593 1 . 1 0 `S600 1 . 1 0 ]
-[s S609 . 4 `S604 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S614 . 4 `uc 1 . 1 0 :8:0 
+[u S624 _BD_STAT 1 `uc 1 Val 1 0 `S604 1 . 1 0 `S613 1 . 1 0 `S620 1 . 1 0 ]
+[s S629 . 4 `S624 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S634 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :8:0 
 `us 1 ADR 2 2 ]
-[u S618 __BDT 4 `S609 1 . 4 0 `S614 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBConfigureEndpoint@handle handle `*.39VES618  1 a 2 6 ]
+[u S638 __BDT 4 `S629 1 . 4 0 `S634 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBConfigureEndpoint@handle handle `*.39VES638  1 a 2 6 ]
 "1549
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
 [v USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]

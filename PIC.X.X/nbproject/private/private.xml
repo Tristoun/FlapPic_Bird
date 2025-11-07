@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/eugen/FlapPic_Bird/PIC.X.X/sysconfig.h</file>
             <file>file:/C:/Users/eugen/FlapPic_Bird/PIC.X.X/main.c</file>
+            <file>file:/C:/Users/eugen/FlapPic_Bird/PIC.X.X/sysconfig.h</file>
+            <file>file:/C:/Users/eugen/FlapPic_Bird/PIC.X.X/glcd.c</file>
+            <file>file:/C:/Users/eugen/FlapPic_Bird/PIC.X.X/glcd.h</file>
         </group>
     </open-files>
 </project-private>

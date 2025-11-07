@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\PIC.X.X.production.sym \
   --cmf=dist/default/production\PIC.X.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\eugen\AppData\Local\Temp\sgrk.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\eugen\AppData\Local\Temp\spfo.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/PIC.X.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=015Ch-03FFh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\eugen\AppData\Local\Temp\sgrk.o \
+  C:\Users\eugen\AppData\Local\Temp\spfo.o \
   dist/default/production\PIC.X.X.production.o 
 
 Object code version is 3.11
@@ -36,7 +36,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\eugen\AppData\Local\Temp\sgrk.o
+C:\Users\eugen\AppData\Local\Temp\spfo.o
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -309,8 +309,8 @@ _LATD                                     (abs)        000F8C
 _PIE2bits                                 (abs)        000FA0
 _PIR2bits                                 (abs)        000FA1
 _PORTA                                    (abs)        000F80
-_PORTBbits                                (abs)        000F81
 _PORTD                                    (abs)        000F83
+_PORTEbits                                (abs)        000F84
 _RemoteWakeup                             bssCOMRAM    000043
 _SetupPkt                                 (abs)        000430
 _T0CON                                    (abs)        000FD5
@@ -830,7 +830,7 @@ _inPipes                                  bssBANK0     000068
 _initTimer0                               text7        00303E
 _initUSBLib                               text3        003030
 _isUSBReady                               text2        002EE4
-_isUSBReady$494                           cstackBANK0  00009C
+_isUSBReady$514                           cstackBANK0  00009C
 _line_coding                              bssCOMRAM    000048
 _main                                     text0        000C14
 _mainISR                                  intcode      000008
@@ -881,7 +881,7 @@ intlevel2                                 text         000000
 intlevel3                                 text         000000
 main@i                                    cstackBANK1  000151
 main@j                                    cstackBANK1  00014F
-main@j_343                                cstackBANK1  00014E
+main@j_363                                cstackBANK1  00014E
 main@lastState                            cstackBANK1  00014A
 main@msg                                  smallconst   0008B2
 main@newScore                             cstackBANK1  00014B

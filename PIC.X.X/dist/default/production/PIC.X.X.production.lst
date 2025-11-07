@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Nov 05 17:14:34 2025
+                                                                                               Fri Nov 07 19:03:10 2025
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -312,7 +312,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    298  0000                     _UCONbits	set	3949
    299  0000                     _PIR2bits	set	4001
    300  0000                     _PIE2bits	set	4000
-   301  0000                     _PORTBbits	set	3969
+   301  0000                     _PORTEbits	set	3972
    302  0000                     _PORTD	set	3971
    303  0000                     _PORTA	set	3968
    304  0000                     _TRISA	set	3986
@@ -547,7 +547,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    533                           
    534                           ; 1 bytes @ 0x4D
    535  00014D                     	ds	1
-   536  00014E                     main@j_343:
+   536  00014E                     main@j_363:
    537                           	opt callstack 0
    538                           
    539                           ; 1 bytes @ 0x4E
@@ -579,7 +579,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    565                           	opt callstack 0
    566  00009C                     USBTransferOnePacket@dir:
    567                           	opt callstack 0
-   568  00009C                     _isUSBReady$494:
+   568  00009C                     _isUSBReady$514:
    569                           	opt callstack 0
    570  00009C                     putUSBUSART@data:
    571                           	opt callstack 0
@@ -938,19 +938,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    924  000C24  0E00               	movlw	0
    925  000C26  6E92               	movwf	146,c	;volatile
    926                           
-   927                           ;main.c: 103:     PORTA = 0x04;
-   928  000C28  0E04               	movlw	4
+   927                           ;main.c: 103:     PORTA = 0x01;
+   928  000C28  0E01               	movlw	1
    929  000C2A  6E80               	movwf	128,c	;volatile
    930                           
    931                           ;main.c: 104:     PORTD = 0x00;
    932  000C2C  0E00               	movlw	0
    933  000C2E  6E83               	movwf	131,c	;volatile
    934                           
-   935                           ;main.c: 105:     LATA = 0x04;
-   936  000C30  0E04               	movlw	4
+   935                           ;main.c: 105:     LATA = 0x01
+   936  000C30  0E01               	movlw	1
    937  000C32  6E89               	movwf	137,c	;volatile
    938  000C34                     
-   939                           ;main.c: 106:     LATD = DIGIT_MAP[0];
+   939                           ;main.c: 107:     LATD = DIGIT_MAP[0];
    940  000C34  0E01               	movlw	low _DIGIT_MAP
    941  000C36  6EF6               	movwf	tblptrl,c
    942  000C38                     	if	1	;There is more than 1 active tblptr byte
@@ -962,10 +962,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    948  000C3C  0008               	tblrd		*
    949  000C3E  CFF5 FF8C          	movff	tablat,3980	;volatile
    950  000C42                     
-   951                           ;main.c: 107:     LATCbits.LATC2 = 0;
+   951                           ;main.c: 108:     LATCbits.LATC2 = 0;
    952  000C42  948B               	bcf	139,2,c	;volatile
    953  000C44                     
-   954                           ;main.c: 110:     _delay((unsigned long)((100)*(48000000/4000.0)));
+   954                           ;main.c: 111:     _delay((unsigned long)((100)*(48000000/4000.0)));
    955  000C44  0E07               	movlw	7
    956  000C46  0100               	movlb	0	; () banked
    957  000C48  6FAF               	movwf	(??_main+1)& (0+255),b
@@ -981,17 +981,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    967  000C5A  D7FA               	bra	u4377
    968  000C5C  F000               	nop	
    969  000C5E                     
-   970                           ;main.c: 113:     initUSBLib();
+   970                           ;main.c: 114:     initUSBLib();
    971  000C5E  EC18  F018         	call	_initUSBLib	;wreg free
    972                           
-   973                           ;main.c: 116:     while (!isUSBReady())
+   973                           ;main.c: 117:     while (!isUSBReady())
    974  000C62  EF3D  F006         	goto	l5037
    975  000C66                     l5033:
    976                           
-   977                           ;main.c: 117:     {;main.c: 118:         CDCTxService();
+   977                           ;main.c: 118:     {;main.c: 119:         CDCTxService();
    978  000C66  EC87  F008         	call	_CDCTxService	;wreg free
    979  000C6A                     
-   980                           ;main.c: 119:         _delay((unsigned long)((10)*(48000000/4000.0)));
+   980                           ;main.c: 120:         _delay((unsigned long)((10)*(48000000/4000.0)));
    981  000C6A  0E9C               	movlw	156
    982  000C6C  0100               	movlb	0	; () banked
    983  000C6E  6FAE               	movwf	??_main& (0+255),b
@@ -1003,7 +1003,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    989  000C78  D7FC               	bra	u4387
    990  000C7A                     l5037:
    991                           
-   992                           ;main.c: 116:     while (!isUSBReady())
+   992                           ;main.c: 117:     while (!isUSBReady())
    993  000C7A  EC72  F017         	call	_isUSBReady	;wreg free
    994  000C7E  0900               	iorlw	0
    995  000C80  B4D8               	btfsc	status,2,c
@@ -1013,44 +1013,44 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    999  000C8A  EF33  F006         	goto	l5033
   1000  000C8E                     u4200:
   1001  000C8E                     
-  1002                           ;main.c: 123:     INTCONbits.PEIE = 1;
+  1002                           ;main.c: 124:     INTCONbits.PEIE = 1;
   1003  000C8E  8CF2               	bsf	242,6,c	;volatile
   1004                           
-  1005                           ;main.c: 124:     INTCONbits.GIE = 1;
+  1005                           ;main.c: 125:     INTCONbits.GIE = 1;
   1006  000C90  8EF2               	bsf	242,7,c	;volatile
   1007  000C92                     
-  1008                           ;main.c: 126:     initTimer0();
+  1008                           ;main.c: 127:     initTimer0();
   1009  000C92  EC1F  F018         	call	_initTimer0	;wreg free
   1010  000C96                     
-  1011                           ;main.c: 128:     unsigned char lastState = 0;
+  1011                           ;main.c: 129:     unsigned char lastState = 0;
   1012  000C96  0E00               	movlw	0
   1013  000C98  0101               	movlb	1	; () banked
   1014  000C9A  6F4A               	movwf	main@lastState& (0+255),b
   1015  000C9C                     
   1016                           ; BSR set to: 1
-  1017                           ;main.c: 131:     unsigned char scoreBuffer[10];;main.c: 132:     unsigned char scoreInd
+  1017                           ;main.c: 132:     unsigned char scoreBuffer[10];;main.c: 133:     unsigned char scoreInd
       +                          ex = 0;
   1018  000C9C  0E00               	movlw	0
   1019  000C9E  6F50               	movwf	main@scoreIndex& (0+255),b
   1020  000CA0                     l5047:
   1021                           
-  1022                           ;main.c: 135:     {;main.c: 137:         CDCTxService();
+  1022                           ;main.c: 136:     {;main.c: 138:         CDCTxService();
   1023  000CA0  EC87  F008         	call	_CDCTxService	;wreg free
   1024  000CA4                     
-  1025                           ;main.c: 140:         displayScore(score);
+  1025                           ;main.c: 141:         displayScore(score);
   1026  000CA4  C08E  F0A8         	movff	_score,displayScore@score	;volatile
   1027  000CA8  C08F  F0A9         	movff	_score+1,displayScore@score+1	;volatile
   1028  000CAC  EC53  F00F         	call	_displayScore	;wreg free
   1029  000CB0                     
-  1030                           ;main.c: 143:         currentState = PORTBbits.RB0;
+  1030                           ;main.c: 144:         currentState = PORTEbits.RE0;
   1031  000CB0  0E00               	movlw	0
-  1032  000CB2  B081               	btfsc	129,0,c	;volatile
+  1032  000CB2  B084               	btfsc	132,0,c	;volatile
   1033  000CB4  0E01               	movlw	1
   1034  000CB6  0100               	movlb	0	; () banked
   1035  000CB8  6F93               	movwf	_currentState& (0+255),b	;volatile
   1036  000CBA                     
   1037                           ; BSR set to: 0
-  1038                           ;main.c: 145:         if (currentState != lastState)
+  1038                           ;main.c: 146:         if (currentState != lastState)
   1039  000CBA  0101               	movlb	1	; () banked
   1040  000CBC  514A               	movf	main@lastState& (0+255),w,b
   1041  000CBE  0100               	movlb	0	; () banked
@@ -1063,11 +1063,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1048  000CD0                     u4210:
   1049  000CD0                     
   1050                           ; BSR set to: 0
-  1051                           ;main.c: 146:         {;main.c: 147:             lastState = currentState;
+  1051                           ;main.c: 147:         {;main.c: 148:             lastState = currentState;
   1052  000CD0  C093  F14A         	movff	_currentState,main@lastState	;volatile
   1053  000CD4                     
   1054                           ; BSR set to: 0
-  1055                           ;main.c: 148:             if (currentState)
+  1055                           ;main.c: 149:             if (currentState)
   1056  000CD4  5193               	movf	_currentState& (0+255),w,b	;volatile
   1057  000CD6  B4D8               	btfsc	status,2,c
   1058  000CD8  EF70  F006         	goto	u4221
@@ -1077,7 +1077,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1062  000CE4                     u4220:
   1063  000CE4                     
   1064                           ; BSR set to: 0
-  1065                           ;main.c: 149:             {;main.c: 150:                 if (isUSBReady())
+  1065                           ;main.c: 150:             {;main.c: 151:                 if (isUSBReady())
   1066  000CE4  EC72  F017         	call	_isUSBReady	;wreg free
   1067  000CE8  0900               	iorlw	0
   1068  000CEA  B4D8               	btfsc	status,2,c
@@ -1087,8 +1087,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1072  000CF4  EF87  F006         	goto	l5065
   1073  000CF8                     u4230:
   1074  000CF8                     
-  1075                           ;main.c: 151:                 {;main.c: 152:                     const char msg[] = "1\r
-      +                          \n";;main.c: 153:                     putUSBUSART((uint8_t *)msg, sizeof(msg) - 1);
+  1075                           ;main.c: 152:                 {;main.c: 153:                     const char msg[] = "1\r
+      +                          \n";;main.c: 154:                     putUSBUSART((uint8_t *)msg, sizeof(msg) - 1);
   1076  000CF8  0EB2               	movlw	low main@msg
   1077  000CFA  0100               	movlb	0	; () banked
   1078  000CFC  6F9C               	movwf	putUSBUSART@data& (0+255),b
@@ -1098,11 +1098,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1082  000D04  6F9E               	movwf	putUSBUSART@length& (0+255),b
   1083  000D06  ECD8  F017         	call	_putUSBUSART	;wreg free
   1084  000D0A                     
-  1085                           ;main.c: 154:                     CDCTxService();
+  1085                           ;main.c: 155:                     CDCTxService();
   1086  000D0A  EC87  F008         	call	_CDCTxService	;wreg free
   1087  000D0E                     l5065:
   1088                           
-  1089                           ;main.c: 160:         if (isUSBReady())
+  1089                           ;main.c: 161:         if (isUSBReady())
   1090  000D0E  EC72  F017         	call	_isUSBReady	;wreg free
   1091  000D12  0900               	iorlw	0
   1092  000D14  B4D8               	btfsc	status,2,c
@@ -1112,7 +1112,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1096  000D1E  EF50  F006         	goto	l5047
   1097  000D22                     u4240:
   1098  000D22                     
-  1099                           ;main.c: 161:         {;main.c: 162:             rxLength = getsUSBUSART(rxBuffer, sizeo
+  1099                           ;main.c: 162:         {;main.c: 163:             rxLength = getsUSBUSART(rxBuffer, sizeo
       +                          f(rxBuffer));
   1100  000D22  0E00               	movlw	low main@rxBuffer
   1101  000D24  0100               	movlb	0	; () banked
@@ -1126,7 +1126,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1109  000D36  6F4D               	movwf	main@rxLength& (0+255),b
   1110  000D38                     
   1111                           ; BSR set to: 1
-  1112                           ;main.c: 163:             if (rxLength > 0)
+  1112                           ;main.c: 164:             if (rxLength > 0)
   1113  000D38  514D               	movf	main@rxLength& (0+255),w,b
   1114  000D3A  B4D8               	btfsc	status,2,c
   1115  000D3C  EFA2  F006         	goto	u4251
@@ -1136,7 +1136,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1119  000D48                     u4250:
   1120  000D48                     
   1121                           ; BSR set to: 1
-  1122                           ;main.c: 164:             {;main.c: 165:                 for (uint8_t i = 0; i < rxLengt
+  1122                           ;main.c: 165:             {;main.c: 166:                 for (uint8_t i = 0; i < rxLengt
       +                          h; i++)
   1123  000D48  0E00               	movlw	0
   1124  000D4A  6F51               	movwf	main@i& (0+255),b
@@ -1144,7 +1144,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1126  000D50                     l5073:
   1127                           
   1128                           ; BSR set to: 1
-  1129                           ;main.c: 166:                 {;main.c: 168:                     if (rxBuffer[i] == 'B')
+  1129                           ;main.c: 167:                 {;main.c: 169:                     if (rxBuffer[i] == 'B')
   1130  000D50  0E00               	movlw	low main@rxBuffer
   1131  000D52  2551               	addwf	main@i& (0+255),w,b
   1132  000D54  6ED9               	movwf	fsr2l,c
@@ -1161,18 +1161,18 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1143  000D6E                     u4260:
   1144  000D6E                     
   1145                           ; BSR set to: 1
-  1146                           ;main.c: 169:                     {;main.c: 170:                         buzzerActive = 
+  1146                           ;main.c: 170:                     {;main.c: 171:                         buzzerActive = 
       +                          1;
   1147  000D6E  0E01               	movlw	1
   1148  000D70  6E47               	movwf	_buzzerActive^0,c	;volatile
   1149                           
-  1150                           ;main.c: 171:                         buzzerCounter = 0;
+  1150                           ;main.c: 172:                         buzzerCounter = 0;
   1151  000D72  0E00               	movlw	0
   1152  000D74  6E36               	movwf	(_buzzerCounter+1)^0,c	;volatile
   1153  000D76  0E00               	movlw	0
   1154  000D78  6E35               	movwf	_buzzerCounter^0,c	;volatile
   1155                           
-  1156                           ;main.c: 172:                     }
+  1156                           ;main.c: 173:                     }
   1157  000D7A  EF65  F007         	goto	l5113
   1158  000D7E                     l5077:
   1159                           
@@ -1193,17 +1193,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1174  000D9C                     u4270:
   1175  000D9C                     
   1176                           ; BSR set to: 1
-  1177                           ;main.c: 175:                     {;main.c: 176:                         scoreIndex = 0;
+  1177                           ;main.c: 176:                     {;main.c: 177:                         scoreIndex = 0;
   1178  000D9C  0E00               	movlw	0
   1179  000D9E  6F50               	movwf	main@scoreIndex& (0+255),b
   1180                           
-  1181                           ;main.c: 178:                         for (uint8_t j = 0; j < 10; j++)
+  1181                           ;main.c: 179:                         for (uint8_t j = 0; j < 10; j++)
   1182  000DA0  0E00               	movlw	0
   1183  000DA2  6F4F               	movwf	main@j& (0+255),b
   1184  000DA4                     l5085:
   1185                           
   1186                           ; BSR set to: 1
-  1187                           ;main.c: 179:                             scoreBuffer[j] = 0;
+  1187                           ;main.c: 180:                             scoreBuffer[j] = 0;
   1188  000DA4  0E40               	movlw	low main@scoreBuffer
   1189  000DA6  254F               	addwf	main@j& (0+255),w,b
   1190  000DA8  6ED9               	movwf	fsr2l,c
@@ -1258,7 +1258,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1239  000E02                     u4300:
   1240  000E02                     
   1241                           ; BSR set to: 1
-  1242                           ;main.c: 183:                     {;main.c: 184:                         scoreBuffer[sco
+  1242                           ;main.c: 184:                     {;main.c: 185:                         scoreBuffer[sco
       +                          reIndex++] = rxBuffer[i];
   1243  000E02  0E00               	movlw	low main@rxBuffer
   1244  000E04  2551               	addwf	main@i& (0+255),w,b
@@ -1277,7 +1277,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1257                           ; BSR set to: 1
   1258  000E1E  2B50               	incf	main@scoreIndex& (0+255),f,b
   1259                           
-  1260                           ;main.c: 185:                     }
+  1260                           ;main.c: 186:                     }
   1261  000E20  EF65  F007         	goto	l5113
   1262  000E24                     l5099:
   1263                           
@@ -1307,21 +1307,21 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1287  000E52                     u4320:
   1288  000E52                     
   1289                           ; BSR set to: 1
-  1290                           ;main.c: 188:                     {;main.c: 190:                         unsigned int ne
+  1290                           ;main.c: 189:                     {;main.c: 191:                         unsigned int ne
       +                          wScore = 0;
   1291  000E52  0E00               	movlw	0
   1292  000E54  6F4C               	movwf	(main@newScore+1)& (0+255),b
   1293  000E56  0E00               	movlw	0
   1294  000E58  6F4B               	movwf	main@newScore& (0+255),b
   1295                           
-  1296                           ;main.c: 191:                         for (uint8_t j = 0; j < scoreIndex; j++)
+  1296                           ;main.c: 192:                         for (uint8_t j = 0; j < scoreIndex; j++)
   1297  000E5A  0E00               	movlw	0
-  1298  000E5C  6F4E               	movwf	main@j_343& (0+255),b
+  1298  000E5C  6F4E               	movwf	main@j_363& (0+255),b
   1299  000E5E  EF54  F007         	goto	l5109
   1300  000E62                     l5105:
   1301                           
   1302                           ; BSR set to: 1
-  1303                           ;main.c: 192:                         {;main.c: 193:                             newScor
+  1303                           ;main.c: 193:                         {;main.c: 194:                             newScor
       +                          e = newScore * 10 + (scoreBuffer[j] - '0');
   1304  000E62  C14B  F09C         	movff	main@newScore,___wmul@multiplier
   1305  000E66  C14C  F09D         	movff	main@newScore+1,___wmul@multiplier+1
@@ -1333,7 +1333,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1311  000E74  EC04  F018         	call	___wmul	;wreg free
   1312  000E78  0E40               	movlw	low main@scoreBuffer
   1313  000E7A  0101               	movlb	1	; () banked
-  1314  000E7C  254E               	addwf	main@j_343& (0+255),w,b
+  1314  000E7C  254E               	addwf	main@j_363& (0+255),w,b
   1315  000E7E  6ED9               	movwf	fsr2l,c
   1316  000E80  6ADA               	clrf	fsr2h,c
   1317  000E82  0E01               	movlw	high main@scoreBuffer
@@ -1356,13 +1356,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1334  000EA4  6F4C               	movwf	(main@newScore+1)& (0+255),b
   1335  000EA6                     
   1336                           ; BSR set to: 1
-  1337                           ;main.c: 194:                         }
-  1338  000EA6  2B4E               	incf	main@j_343& (0+255),f,b
+  1337                           ;main.c: 195:                         }
+  1338  000EA6  2B4E               	incf	main@j_363& (0+255),f,b
   1339  000EA8                     l5109:
   1340                           
   1341                           ; BSR set to: 1
   1342  000EA8  5150               	movf	main@scoreIndex& (0+255),w,b
-  1343  000EAA  5D4E               	subwf	main@j_343& (0+255),w,b
+  1343  000EAA  5D4E               	subwf	main@j_363& (0+255),w,b
   1344  000EAC  A0D8               	btfss	status,0,c
   1345  000EAE  EF5B  F007         	goto	u4331
   1346  000EB2  EF5D  F007         	goto	u4330
@@ -1371,12 +1371,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1349  000EBA                     u4330:
   1350  000EBA                     
   1351                           ; BSR set to: 1
-  1352                           ;main.c: 195:                         score = newScore;
+  1352                           ;main.c: 196:                         score = newScore;
   1353  000EBA  C14B  F08E         	movff	main@newScore,_score	;volatile
   1354  000EBE  C14C  F08F         	movff	main@newScore+1,_score+1	;volatile
   1355  000EC2                     
   1356                           ; BSR set to: 1
-  1357                           ;main.c: 196:                         scoreIndex = 0;
+  1357                           ;main.c: 197:                         scoreIndex = 0;
   1358  000EC2  0E00               	movlw	0
   1359  000EC4  6F50               	movwf	main@scoreIndex& (0+255),b
   1360  000EC6  EF65  F007         	goto	l5113
@@ -1384,7 +1384,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1362  000ECA                     l5113:
   1363                           
   1364                           ; BSR set to: 1
-  1365                           ;main.c: 198:                 }
+  1365                           ;main.c: 199:                 }
   1366  000ECA  2B51               	incf	main@i& (0+255),f,b
   1367  000ECC                     l5115:
   1368                           
@@ -1526,19 +1526,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1501  002F02                     u4140:
   1502  002F02  0E00               	movlw	0
   1503  002F04  0100               	movlb	0	; () banked
-  1504  002F06  6F9D               	movwf	(_isUSBReady$494+1)& (0+255),b
-  1505  002F08  699C               	setf	_isUSBReady$494& (0+255),b
+  1504  002F06  6F9D               	movwf	(_isUSBReady$514+1)& (0+255),b
+  1505  002F08  699C               	setf	_isUSBReady$514& (0+255),b
   1506  002F0A  EF8C  F017         	goto	l133
   1507  002F0E                     l4971:
   1508  002F0E  0E00               	movlw	0
   1509  002F10  0100               	movlb	0	; () banked
-  1510  002F12  6F9D               	movwf	(_isUSBReady$494+1)& (0+255),b
+  1510  002F12  6F9D               	movwf	(_isUSBReady$514+1)& (0+255),b
   1511  002F14  0E00               	movlw	0
-  1512  002F16  6F9C               	movwf	_isUSBReady$494& (0+255),b
+  1512  002F16  6F9C               	movwf	_isUSBReady$514& (0+255),b
   1513  002F18                     l133:
   1514                           
   1515                           ; BSR set to: 0
-  1516  002F18  519C               	movf	_isUSBReady$494& (0+255),w,b
+  1516  002F18  519C               	movf	_isUSBReady$514& (0+255),w,b
   1517  002F1A                     
   1518                           ; BSR set to: 0
   1519  002F1A  0012               	return		;funcret
@@ -2547,8 +2547,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2514  001F38                     u3990:
   2515  001F38                     
   2516                           ; BSR set to: 0
-  2517                           ;main.c: 74:         LATA = 0x01;
-  2518  001F38  0E01               	movlw	1
+  2517                           ;main.c: 74:         LATA = 0x04;
+  2518  001F38  0E04               	movlw	4
   2519  001F3A  6E89               	movwf	137,c	;volatile
   2520  001F3C                     
   2521                           ; BSR set to: 0
@@ -2623,8 +2623,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2590  001F9E  D000               	nop2	
   2591  001FA0                     l4889:
   2592                           
-  2593                           ;main.c: 87:     LATA = 0x04;
-  2594  001FA0  0E04               	movlw	4
+  2593                           ;main.c: 87:     LATA = 0x01;
+  2594  001FA0  0E01               	movlw	1
   2595  001FA2  6E89               	movwf	137,c	;volatile
   2596  001FA4                     
   2597                           ;main.c: 88:     LATD = DIGIT_MAP[units];
@@ -9354,19 +9354,19 @@ Pointer List with Targets:
 
     pCDCDst.bRam	PTR unsigned char  size(2) Largest target is 0
 
-    S2163_POINTER$wRom	PTR const unsigned short  size(2) Largest target is 0
+    S2183_POINTER$wRom	PTR const unsigned short  size(2) Largest target is 0
 
     pCDCSrc.wRom	PTR const unsigned short  size(2) Largest target is 0
 
-    S2163_POINTER$bRom	PTR const unsigned char  size(2) Largest target is 0
+    S2183_POINTER$bRom	PTR const unsigned char  size(2) Largest target is 0
 
     pCDCSrc.bRom	PTR const unsigned char  size(2) Largest target is 0
 
-    S2163_POINTER$wRam	PTR unsigned short  size(2) Largest target is 0
+    S2183_POINTER$wRam	PTR unsigned short  size(2) Largest target is 0
 
     pCDCSrc.wRam	PTR unsigned short  size(2) Largest target is 0
 
-    S2163_POINTER$bRam	PTR unsigned char  size(2) Largest target is 0
+    S2183_POINTER$bRam	PTR unsigned char  size(2) Largest target is 0
 
     pCDCSrc.bRam	PTR unsigned char  size(2) Largest target is 0
 
@@ -9412,33 +9412,33 @@ Pointer List with Targets:
     pBDTEntryIn	PTR volatile struct __BDT[3] size(2) Largest target is 2047
 		 -> RAM(DATA[2047]), NULL(NULL[0]), BDT(BIGRAMl[48]), 
 
-    S657$pFunc	PTR FTN()void  size(2) Largest target is 0
+    S677$pFunc	PTR FTN()void  size(2) Largest target is 0
 		 -> NULL(NULL[0]), 
 
     outPipes.pFunc	PTR FTN()void  size(2) Largest target is 0
 		 -> NULL(NULL[0]), 
 
-    S647$wRam	PTR unsigned short  size(2) Largest target is 0
+    S667$wRam	PTR unsigned short  size(2) Largest target is 0
 
     outPipes.pDst.wRam	PTR unsigned short  size(2) Largest target is 0
 
-    S647$bRam	PTR unsigned char  size(2) Largest target is 0
+    S667$bRam	PTR unsigned char  size(2) Largest target is 0
 
     outPipes.pDst.bRam	PTR unsigned char  size(2) Largest target is 0
 
-    S623$wRom	PTR const unsigned short  size(2) Largest target is 0
+    S643$wRom	PTR const unsigned short  size(2) Largest target is 0
 
     inPipes.pSrc.wRom	PTR const unsigned short  size(2) Largest target is 0
 
-    S623$wRam	PTR unsigned short  size(2) Largest target is 0
+    S643$wRam	PTR unsigned short  size(2) Largest target is 0
 
     inPipes.pSrc.wRam	PTR unsigned short  size(2) Largest target is 0
 
-    S623$bRom	PTR const unsigned char  size(2) Largest target is 0
+    S643$bRom	PTR const unsigned char  size(2) Largest target is 0
 
     inPipes.pSrc.bRom	PTR const unsigned char  size(2) Largest target is 0
 
-    S623$bRam	PTR unsigned char  size(2) Largest target is 0
+    S643$bRam	PTR unsigned char  size(2) Largest target is 0
 
     inPipes.pSrc.bRam	PTR unsigned char  size(2) Largest target is 0
 
@@ -9869,7 +9869,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Nov 05 17:14:34 2025
+Symbol Table                                                                                   Fri Nov 07 19:03:10 2025
 
                               _USB_SD_Ptr 080B                                        l70 1FCA  
                                       l65 304A                                        l93 0ECA  
@@ -10396,7 +10396,7 @@ Symbol Table                                                                    
              __size_of_USBWakeFromSuspend 003E                               _pBDTEntryIn 006E  
         __end_of_USBCtrlEPServiceComplete 1D68               __size_of_USBCheckCDCRequest 010C  
                               _isUSBReady 2EE4                      USBCtrlTrfRxService@i 0001  
-                          _isUSBReady$494 009C                                   ?___wmul 009C  
+                          _isUSBReady$514 009C                                   ?___wmul 009C  
                                  ?_memcpy 0001                                   ?_memset 009C  
                               _device_dsc 089C                          _USBCtrlEPService 2884  
                               _ep_data_in 0087               __end_of_USBCtrlTrfRxService 1AE4  
@@ -10445,7 +10445,7 @@ Symbol Table                                                                    
                                  postinc0 000FEE                                   postinc2 000FDE  
                 _USBCtrlEPServiceComplete 1C26                _USBStatusStageEnabledFlag1 003D  
               _USBStatusStageEnabledFlag2 003C                        USBEnableEndpoint@p 000A  
-                               _PORTBbits 000F81                              _displayScore 1EA6  
+                               _PORTEbits 000F84                              _displayScore 1EA6  
                        displayScore@score 00A8                         displayScore@units 00AB  
                                _TRISBbits 000F93                                 _TRISCbits 000F94  
                       _BothEP0OutUOWNsSet 0040                 USBConfigureEndpoint@EPNum 0006  
@@ -10621,7 +10621,7 @@ Symbol Table                                                                    
               _USBDeferINDataStagePackets 003B               __size_of_USBCheckStdRequest 0126  
                                 _UCONbits 000F6D                      _USBConfigureEndpoint 29F0  
                         displayScore@tens 00AC          __size_of_USBStdFeatureReqHandler 035C  
-                               main@j_343 014E                         ___wmul@multiplier 009C  
+                               main@j_363 014E                         ___wmul@multiplier 009C  
                    ?_USBTransferOnePacket 009C                             ?_CDCTxService 0001  
                             _RemoteWakeup 0043                                  i2_memset 1422  
                  __end_of_USBStallHandler 2DC8                        __end_of_isUSBReady 2F1C  
