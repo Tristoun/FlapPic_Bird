@@ -663,7 +663,11 @@ text33 8B8 304B CODE 8B8 0
 %locals
 dist/default/production\PIC.X.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+<<<<<<< HEAD
 C:\Users\eugen\AppData\Local\Temp\spfo.s
+=======
+C:\Users\eugen\AppData\Local\Temp\s85o.s
+>>>>>>> cb09e4ab0e4b8daba1dc2a1bbe055f8ac14ac43b
 2628 2F1C 0 CODE 0
 2630 2F1C 0 CODE 0
 2633 2F1C 0 CODE 0
@@ -976,7 +980,11 @@ usb_device.c
 1050 1BE2 0 CODE 0
 1052 1C1C 0 CODE 0
 1053 1C24 0 CODE 0
+<<<<<<< HEAD
 C:\Users\eugen\AppData\Local\Temp\spfo.s
+=======
+C:\Users\eugen\AppData\Local\Temp\s85o.s
+>>>>>>> cb09e4ab0e4b8daba1dc2a1bbe055f8ac14ac43b
 7064 8 0 CODE 0
 main.c
 27 8 0 CODE 0
