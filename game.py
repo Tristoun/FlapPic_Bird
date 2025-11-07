@@ -16,7 +16,7 @@ FPS = 17
 WIDTH = 700
 HEIGHT = 900
 
-MODE = "KEY" #Can be PIC or KEYBOARD
+MODE = "k" #Can be PIC or KEYBOARD
 
 pygame.mixer.init()
 
@@ -31,6 +31,7 @@ class GameState(Enum) :
     MENU = 0
     RUN = 1
     STOP = 2
+    REPLAY = 3
 
 class Game:
     def __init__(self, root):
@@ -73,6 +74,9 @@ class Game:
         self.text_score = None
         self.space_pressed = False
         self.frame_jump = 0
+        self.replay = []
+        self.index = 0
+
 
     def checkPicPressed(self) :
         if(self.reader.last_value == 1) :
@@ -81,9 +85,9 @@ class Game:
             
 
     def launch_game(self) :
-        if(self.state == GameState.RUN) :
-            self.generate_text_score()
+        if(self.state == GameState.RUN or self.state == GameState.REPLAY) :
 
+            self.generate_text_score()
 
             self.player_physic()
             self.check_game_collisions()
@@ -150,39 +154,50 @@ class Game:
 
 
     def player_physic(self):
-        if self.state == GameState.RUN:
+        if self.state == GameState.RUN or self.state == GameState.REPLAY:
             self.player.apply_gravity()
             # If velocity is negative (jump), bird is in jump state
             if self.player.velocity > 0:
                 self.player.state = BirdState.FALL
         
     def picjump(self) :
-        if self.state == GameState.RUN:
+        if self.state == GameState.RUN or GameState.REPLAY:
             if(self.frame_jump >= 0) :
                 self.frame_jump = 0
             self.player.jump()
 
     def player_jump(self, event):
-        if self.state == GameState.RUN:
+        if self.state == GameState.RUN or self.state == GameState.REPLAY:
             if(self.frame_jump >= 0) :
                 self.frame_jump = 0
             self.player.jump()
 
 
     def generate_pipes(self) :
+        # print(self.state)
         if(self.state == GameState.RUN) :
             pos_y = randint(-500, 0)
             
             if(self.pipe == []) : 
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=pos_y))
-            elif(self.pipe[-1].x <= WIDTH - 400) :
+                self.replay.append(pos_y)
 
+            elif(self.pipe[-1].x <= WIDTH - 400) :
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=pos_y))
+                self.replay.append(pos_y)
+
+        elif (self.state == GameState.REPLAY) :
+            if(self.pipe == []) :
+                self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=self.replay[self.index]))
+                self.index += 1
+
+            elif(self.pipe[-1].x <= WIDTH - 400) :
+                self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=self.replay[self.index]))
+                self.index += 1
 
 
     def pipes_move(self) :
-
-        if(self.state == GameState.RUN) :
+        if(self.state == GameState.RUN or self.state == GameState.REPLAY) :
             lst_delete = []
 
             for i in range (len(self.pipe)) :
@@ -216,7 +231,7 @@ class Game:
         pipe_check = 2
         if(len(self.pipe) < 2) :
             pipe_check = 1
-        if(self.state == GameState.RUN) :
+        if(self.state == GameState.RUN or self.state == GameState.REPLAY) :
             result = self.player.check_collision(height=HEIGHT)
             if result == True :
                 self.state = GameState.STOP
@@ -248,6 +263,12 @@ class Game:
             self.canvas.delete(self.text_score.id)
         self.canvas.delete(self.text_box)
         self.reader.last_value = 0
+        if(self.replay != []) :
+            print("DEBUG")
+            self.index = 0
+            self.state = GameState.REPLAY
+            print(self.replay, self.state)
+
         self.launch_game()
 
     def click_menu(self, event) :
