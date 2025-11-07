@@ -890,8 +890,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! >= _score -> -> 100 `i `ui 440  ]
 {
 "74
-[; ;main.c: 74:         LATA = 0x01;
-[e = _LATA -> -> 1 `i `uc ]
+[; ;main.c: 74:         LATA = 0x04;
+[e = _LATA -> -> 4 `i `uc ]
 "75
 [; ;main.c: 75:         LATD = DIGIT_MAP[hundreds];
 [e = _LATD *U + &U _DIGIT_MAP * -> _hundreds `ux -> -> # *U &U _DIGIT_MAP `ui `ux ]
@@ -920,8 +920,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 441 ]
 "87
-[; ;main.c: 87:     LATA = 0x04;
-[e = _LATA -> -> 4 `i `uc ]
+[; ;main.c: 87:     LATA = 0x01;
+[e = _LATA -> -> 1 `i `uc ]
 "88
 [; ;main.c: 88:     LATD = DIGIT_MAP[units];
 [e = _LATD *U + &U _DIGIT_MAP * -> _units `ux -> -> # *U &U _DIGIT_MAP `ui `ux ]

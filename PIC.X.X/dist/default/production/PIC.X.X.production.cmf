@@ -11,11 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\eugen\AppData\Local\Temp\sgrk.o
-idloc IDLOC 0 200000 200000 8 1
-init CODE 0 E E 4 1
-reset_vec CODE 0 0 0 4 1
-config CONFIG 0 300000 300000 E 1
 $dist/default/production\PIC.X.X.production.o
 cinit CODE 0 2F1C 2F1C 32 1
 intcode_body CODE 0 2702 2702 CA 1
@@ -72,6 +67,11 @@ bssBANK1 BANK1 1 152 152 A 1
 intcode CODE 0 8 8 6 1
 smallconst SMALLCONST 0 800 800 B8 1
 bssCOMRAM COMRAM 1 2B 2B 28 1
+$C:\Users\eugen\AppData\Local\Temp\s85o.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 E E 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -124,7 +124,7 @@ MEDIUMCONST 304C-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PIC.X.X.production.o
-8 intcode CODE >7064:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+8 intcode CODE >7064:C:\Users\eugen\AppData\Local\Temp\s85o.s
 8 intcode CODE >27:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
 20F2 text44 CODE >1777:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
 20F2 text44 CODE >1783:C:\Users\eugen\FlapPic_Bird\PIC.X.X\usb_device.c
@@ -1004,34 +1004,34 @@ EBA text0 CODE >195:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
 EC2 text0 CODE >196:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
 ECA text0 CODE >197:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
 ECA text0 CODE >198:C:\Users\eugen\FlapPic_Bird\PIC.X.X\main.c
-2F1C cinit CODE >2628:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F1C cinit CODE >2630:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F1C cinit CODE >2633:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F1C cinit CODE >2782:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F20 cinit CODE >2783:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F22 cinit CODE >2784:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F22 cinit CODE >2785:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F24 cinit CODE >2786:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F26 cinit CODE >2787:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F28 cinit CODE >2790:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F2C cinit CODE >2791:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F2E cinit CODE >2792:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F2E cinit CODE >2793:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F30 cinit CODE >2794:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F32 cinit CODE >2795:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F34 cinit CODE >2798:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F38 cinit CODE >2799:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F3A cinit CODE >2800:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F3A cinit CODE >2801:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F3C cinit CODE >2802:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F3E cinit CODE >2803:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F40 cinit CODE >2809:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F40 cinit CODE >2811:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F42 cinit CODE >2812:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F44 cinit CODE >2814:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F46 cinit CODE >2815:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F48 cinit CODE >2816:C:\Users\eugen\AppData\Local\Temp\sgrk.s
-2F4A cinit CODE >2817:C:\Users\eugen\AppData\Local\Temp\sgrk.s
+2F1C cinit CODE >2628:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F1C cinit CODE >2630:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F1C cinit CODE >2633:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F1C cinit CODE >2782:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F20 cinit CODE >2783:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F22 cinit CODE >2784:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F22 cinit CODE >2785:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F24 cinit CODE >2786:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F26 cinit CODE >2787:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F28 cinit CODE >2790:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F2C cinit CODE >2791:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F2E cinit CODE >2792:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F2E cinit CODE >2793:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F30 cinit CODE >2794:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F32 cinit CODE >2795:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F34 cinit CODE >2798:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F38 cinit CODE >2799:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F3A cinit CODE >2800:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F3A cinit CODE >2801:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F3C cinit CODE >2802:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F3E cinit CODE >2803:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F40 cinit CODE >2809:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F40 cinit CODE >2811:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F42 cinit CODE >2812:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F44 cinit CODE >2814:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F46 cinit CODE >2815:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F48 cinit CODE >2816:C:\Users\eugen\AppData\Local\Temp\s85o.s
+2F4A cinit CODE >2817:C:\Users\eugen\AppData\Local\Temp\s85o.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1058,7 +1058,7 @@ __size_ofi2_USBTransferOnePacket 0 0 ABS 0 - dist/default/production\PIC.X.X.pro
 USBTransferOnePacket@dir 9C 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
 USBTransferOnePacket@len 9F 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PIC.X.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\eugen\AppData\Local\Temp\s85o.o
 __size_of_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PIC.X.X.production.o
 __end_of_USBStdSetCfgHandler 2702 0 CODE 0 text29 dist/default/production\PIC.X.X.production.o
@@ -1078,13 +1078,13 @@ _UEIE F6B 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 _UEIR F6A 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 _UEP0 F70 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 _UEP1 F71 0 ABS 0 - dist/default/production\PIC.X.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\sgrk.o
+___sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\s85o.o
 _main C14 0 CODE 0 text0 dist/default/production\PIC.X.X.production.o
 _pDst 2F 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
 btemp 53 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
 _DIGIT_MAP 801 0 SMALLCONST 0 smallconst dist/default/production\PIC.X.X.production.o
 __size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
-start E 0 CODE 0 init C:\Users\eugen\AppData\Local\Temp\sgrk.o
+start E 0 CODE 0 init C:\Users\eugen\AppData\Local\Temp\s85o.o
 main@lastState 14A 0 BANK1 1 cstackBANK1 dist/default/production\PIC.X.X.production.o
 _USBTransferOnePacket 1AE4 0 CODE 0 text14 dist/default/production\PIC.X.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
@@ -1107,11 +1107,11 @@ _buzzerActive 47 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production
 ttemp5 54 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
 ttemp6 57 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
 ttemp7 5B 0 COMRAM 1 temp dist/default/production\PIC.X.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\sgrk.o
-intlevel0 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
-intlevel1 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
-intlevel2 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
-intlevel3 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__accesstop 60 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\s85o.o
+intlevel0 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\s85o.o
+intlevel1 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\s85o.o
+intlevel2 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\s85o.o
+intlevel3 0 0 CODE 0 text C:\Users\eugen\AppData\Local\Temp\s85o.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PIC.X.X.production.o
 __CFG_USBDIV$2 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 __size_of_initTimer0 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
@@ -1139,8 +1139,8 @@ ___wmul@multiplicand 9E 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.pr
 displayScore@tens AC 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 _line_coding 48 0 COMRAM 1 bssCOMRAM dist/default/production\PIC.X.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\sgrk.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\sgrk.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\s85o.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\eugen\AppData\Local\Temp\s85o.o
 __end_of_USBCtrlEPServiceComplete 1D68 0 CODE 0 text26 dist/default/production\PIC.X.X.production.o
 __end_of_CDCTxService 12AA 0 CODE 0 text13 dist/default/production\PIC.X.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PIC.X.X.production.o
@@ -1243,7 +1243,7 @@ ___lwdiv@counter A0 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.produc
 __size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PIC.X.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\PIC.X.X.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\eugen\AppData\Local\Temp\s85o.o
 _USBCheckStdRequest 1FCC 0 CODE 0 text28 dist/default/production\PIC.X.X.production.o
 _isUSBReady 2EE4 0 CODE 0 text2 dist/default/production\PIC.X.X.production.o
 _USBIncrement1msInternalTimers 2F4E 0 CODE 0 text22 dist/default/production\PIC.X.X.production.o
@@ -1492,8 +1492,8 @@ USBEnableEndpoint@p A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC.X.X.pr
 _dummy_encapsulated_cmd_response 94 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\PIC.X.X.production.o
 putUSBUSART@length 9E 0 BANK0 1 cstackBANK0 dist/default/production\PIC.X.X.production.o
-stackhi 3FF 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\sgrk.o
-stacklo 15C 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\sgrk.o
+stackhi 3FF 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\s85o.o
+stacklo 15C 0 ABS 0 - C:\Users\eugen\AppData\Local\Temp\s85o.o
 _cdc_mem_type 90 0 BANK0 1 bssBANK0 dist/default/production\PIC.X.X.production.o
 __end_of_USBConfigureEndpoint 2A9C 0 CODE 0 text39 dist/default/production\PIC.X.X.production.o
 _USBCtrlEPAllowDataStage 293C 0 CODE 0 text27 dist/default/production\PIC.X.X.production.o
@@ -1596,7 +1596,7 @@ __Ltext43 0 0 ABS 0 text43 dist/default/production\PIC.X.X.production.o
 __Ltext44 0 0 ABS 0 text44 dist/default/production\PIC.X.X.production.o
 __end_of_USBCheckCDCRequest 241C 0 CODE 0 text35 dist/default/production\PIC.X.X.production.o
 __end_of_USBCtrlTrfInHandler 2526 0 CODE 0 text43 dist/default/production\PIC.X.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\eugen\AppData\Local\Temp\sgrk.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\eugen\AppData\Local\Temp\s85o.o
 _CDCInitEP 2D04 0 CODE 0 text36 dist/default/production\PIC.X.X.production.o
 _USBCtrlEPServiceComplete 1C26 0 CODE 0 text26 dist/default/production\PIC.X.X.production.o
 __Lpowerup E 0 CODE 0 powerup dist/default/production\PIC.X.X.production.o

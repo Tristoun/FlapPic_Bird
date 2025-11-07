@@ -6846,7 +6846,7 @@ void displayScore(unsigned int score)
 
 
     if (score >= 100) {
-        LATA = 0x01;
+        LATA = 0x04;
         LATD = DIGIT_MAP[hundreds];
         _delay((unsigned long)((3)*(48000000/4000.0)));
     }
@@ -6859,7 +6859,7 @@ void displayScore(unsigned int score)
     }
 
 
-    LATA = 0x04;
+    LATA = 0x01;
     LATD = DIGIT_MAP[units];
     _delay((unsigned long)((3)*(48000000/4000.0)));
 }

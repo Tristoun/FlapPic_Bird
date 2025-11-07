@@ -69,9 +69,9 @@ void displayScore(unsigned int score)
     // Afficher sur les 3 premiers afficheurs
     // Note: sur EasyPIC, PORTA contrôle quel afficheur est actif (DIS0-DIS3)
     
-    // Afficher centaines sur DIS0
+    // Afficher centaines sur DIS2
     if (score >= 100) {
-        LATA = 0x01; // Activer DIS0
+        LATA = 0x04; // Activer DIS2
         LATD = DIGIT_MAP[hundreds];
         __delay_ms(3);
     }
@@ -83,8 +83,8 @@ void displayScore(unsigned int score)
         __delay_ms(3);
     }
     
-    // Afficher unités sur DIS2
-    LATA = 0x04; // Activer DIS2
+    // Afficher unités sur DIS0
+    LATA = 0x01; // Activer DIS0
     LATD = DIGIT_MAP[units];
     __delay_ms(3);
 }

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Nov 05 17:14:34 2025
+                                                                                               Fri Nov 07 14:23:39 2025
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -2547,8 +2547,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2514  001F38                     u3990:
   2515  001F38                     
   2516                           ; BSR set to: 0
-  2517                           ;main.c: 74:         LATA = 0x01;
-  2518  001F38  0E01               	movlw	1
+  2517                           ;main.c: 74:         LATA = 0x04;
+  2518  001F38  0E04               	movlw	4
   2519  001F3A  6E89               	movwf	137,c	;volatile
   2520  001F3C                     
   2521                           ; BSR set to: 0
@@ -2623,8 +2623,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2590  001F9E  D000               	nop2	
   2591  001FA0                     l4889:
   2592                           
-  2593                           ;main.c: 87:     LATA = 0x04;
-  2594  001FA0  0E04               	movlw	4
+  2593                           ;main.c: 87:     LATA = 0x01;
+  2594  001FA0  0E01               	movlw	1
   2595  001FA2  6E89               	movwf	137,c	;volatile
   2596  001FA4                     
   2597                           ;main.c: 88:     LATD = DIGIT_MAP[units];
@@ -9869,7 +9869,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Nov 05 17:14:34 2025
+Symbol Table                                                                                   Fri Nov 07 14:23:39 2025
 
                               _USB_SD_Ptr 080B                                        l70 1FCA  
                                       l65 304A                                        l93 0ECA  
