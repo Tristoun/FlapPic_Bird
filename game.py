@@ -16,7 +16,7 @@ FPS = 17
 WIDTH = 700
 HEIGHT = 900
 
-MODE = "PIC" #Can be PIC or KEYBOARD
+MODE = "k" #Can be PIC or KEYBOARD
 
 pygame.mixer.init()
 
