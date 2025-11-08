@@ -31,6 +31,7 @@ class GameState(Enum) :
     MENU = 0
     RUN = 1
     STOP = 2
+    REPLAY = 3
 
 class Game:
     def __init__(self, root):
@@ -60,6 +61,7 @@ class Game:
         self.text = str(self.score)
 
         self.bouton_start = ""
+        self.instruction = None
 
         self.speed = 1
 
@@ -72,16 +74,20 @@ class Game:
         self.text_score = None
         self.space_pressed = False
         self.frame_jump = 0
+        self.replay = []
+        self.index = 0
+
 
     def checkPicPressed(self) :
         if(self.reader.last_value == 1) :
             return True
         return False
+            
 
     def launch_game(self) :
-        if(self.state == GameState.RUN) :
-            self.generate_text_score()
+        if(self.state == GameState.RUN or self.state == GameState.REPLAY) :
 
+            self.generate_text_score()
 
             self.player_physic()
             self.check_game_collisions()
@@ -110,7 +116,11 @@ class Game:
 
     def menu(self) :
         if(self.state == GameState.MENU) :
-            self.bouton_start =  Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2-14)
+
+            #Ajout du bouton instructions et du bouton replay
+            self.instruction = Bouton(self.canvas, size=(470, 600), path="images/images/carre_mode.png", x=WIDTH/2-230, y=HEIGHT/2-300)
+            self.bouton_start =  Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2+120)
+
             self.score = 0
             self.text = "0"
             self.text_box = None
@@ -144,39 +154,58 @@ class Game:
 
 
     def player_physic(self):
-        if self.state == GameState.RUN:
+        if self.state == GameState.RUN or self.state == GameState.REPLAY:
             self.player.apply_gravity()
             # If velocity is negative (jump), bird is in jump state
             if self.player.velocity > 0:
                 self.player.state = BirdState.FALL
         
     def picjump(self) :
-        if self.state == GameState.RUN:
+        if self.state == GameState.RUN or GameState.REPLAY:
             if(self.frame_jump >= 0) :
                 self.frame_jump = 0
             self.player.jump()
 
     def player_jump(self, event):
-        if self.state == GameState.RUN:
+        if self.state == GameState.RUN or self.state == GameState.REPLAY:
             if(self.frame_jump >= 0) :
                 self.frame_jump = 0
             self.player.jump()
 
 
     def generate_pipes(self) :
+        # print(self.state)
         if(self.state == GameState.RUN) :
             pos_y = randint(-500, 0)
             
             if(self.pipe == []) : 
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=pos_y))
-            elif(self.pipe[-1].x <= WIDTH - 400) :
+                self.replay.append(pos_y)
 
+            elif(self.pipe[-1].x <= WIDTH - 400) :
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=pos_y))
+                self.replay.append(pos_y)
+
+        elif (self.state == GameState.REPLAY) :
+            if(self.pipe == []) :
+                self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=self.replay[self.index]))
+                self.index += 1
+
+            elif(self.pipe[-1].x <= WIDTH - 400) :
+                self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=self.replay[self.index]))
+                self.index += 1
+    
+    def send_pic_signals(self, score):
+        try:
+            self.reader.send_buzzer_signal()
+            self.reader.send_score(score)
+        except Exception as e:
+            print(f"Erreur PIC: {e}")
+
 
 
     def pipes_move(self) :
-        
-        if(self.state == GameState.RUN) :
+        if(self.state == GameState.RUN or self.state == GameState.REPLAY) :
             lst_delete = []
 
             for i in range (len(self.pipe)) :
@@ -191,6 +220,12 @@ class Game:
                 del(self.pipe[j])
             
                 self.score += 1
+
+                if(MODE == "PIC" and self.reader):
+                    import threading
+                    threading.Thread(target=self.send_pic_signals, args=(self.score,), daemon=True).start()
+
+
                 if(self.score %10 == 0 and self.score != 0) :
                     self.speed += 1
                 self.text = str(self.score)
@@ -210,7 +245,7 @@ class Game:
         pipe_check = 2
         if(len(self.pipe) < 2) :
             pipe_check = 1
-        if(self.state == GameState.RUN) :
+        if(self.state == GameState.RUN or self.state == GameState.REPLAY) :
             result = self.player.check_collision(height=HEIGHT)
             if result == True :
                 self.state = GameState.STOP
@@ -231,6 +266,7 @@ class Game:
     def launch_game_PIC(self) :
         self.state = GameState.RUN
         self.canvas.delete(self.bouton_start.id)
+        self.canvas.delete(self.instruction.id)
         self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png", size=(60,55))
         self.score = 0
         # self.text_box = None
@@ -241,6 +277,12 @@ class Game:
             self.canvas.delete(self.text_score.id)
         self.canvas.delete(self.text_box)
         self.reader.last_value = 0
+        if(self.replay != []) :
+            print("DEBUG")
+            self.index = 0
+            self.state = GameState.REPLAY
+            print(self.replay, self.state)
+
         self.launch_game()
 
     def click_menu(self, event) :
@@ -248,6 +290,7 @@ class Game:
             if(event.x >= self.bouton_start.x and event.x <= self.bouton_start.x + self.bouton_start.size[0] and event.y >= self.bouton_start.y and event.y <= self.bouton_start.y + self.bouton_start.size[1]) :
                 self.state = GameState.RUN
                 self.canvas.delete(self.bouton_start.id)
+                self.canvas.delete(self.instruction.id)
                 self.player = Bird(self.canvas, path="images/images/dog_wingsdown.png", size=(60,55))
                 self.score = 0
                 # self.text_box = None
@@ -257,6 +300,7 @@ class Game:
                 if(self.text_score!= None) :
                     self.canvas.delete(self.text_score.id)
                 self.canvas.delete(self.text_box)
+                #DEBUG
                 self.launch_game()
 
 

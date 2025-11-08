@@ -72,7 +72,8 @@
 
 
 #pragma config EBTRB = OFF
-# 2 "main.c" 2
+# 1 "main.c" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5684,7 +5685,8 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 3 "main.c" 2
+# 2 "main.c" 2
+
 # 1 "./usb_cdc_lib.h" 1
 
 
@@ -6791,13 +6793,15 @@ extern LINE_CODING line_coding;
 
 extern volatile CTRL_TRF_SETUP SetupPkt;
 extern const uint8_t configDescriptor1[];
-# 14 "./usb_cdc_lib.h" 2
+# 13 "./usb_cdc_lib.h" 2
+
 
 void initUSBLib(void);
 unsigned char isUSBReady(void);
 
 __attribute__((inline)) void processUSBTasks(void);
-# 4 "main.c" 2
+# 3 "main.c" 2
+
 
 
 

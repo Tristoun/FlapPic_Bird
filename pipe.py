@@ -3,7 +3,7 @@ from PIL import Image, ImageTk
 from bird import Bird
 
 class Pipe:
-    def __init__(self, canvas, x, top, bot, y = 300, width=87, height = 600, gap=200):
+    def __init__(self, canvas, x, top, bot, y = 300, width=87, height = 600, gap=250):
         self.canvas = canvas
         self.x = x
         self.y = y

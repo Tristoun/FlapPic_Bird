@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\usbcdcdemo.X.production.hex">
+  <executable name="dist/default/production\PIC.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
