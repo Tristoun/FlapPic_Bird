@@ -1,0 +1,6 @@
+{
+   "files.associations": {
+      "*.cpp": "cpp",
+      "usb_cdc_lib.h": "c"
+   }
+}

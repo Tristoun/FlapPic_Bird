@@ -5,7 +5,7 @@
 #define _XTAL_FREQ 48000000
 #define DISP_A 0b01110111  // segments pour "A"
 
-volatile unsigned char currentState = 0;  // rendue globale pour accès ASM
+volatile unsigned char currentState = 0;  // rendue globale pour accï¿½s ASM
 
 void __interrupt() mainISR(void)
 {
@@ -54,7 +54,7 @@ void main(void)
             }
             else
             {
-                // Éteindre afficheur
+                // ï¿½teindre afficheur
                 asm("clrf PORTD");
             }
         }

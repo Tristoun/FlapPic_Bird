@@ -3,17 +3,16 @@ Microchip MPLAB XC8 Compiler V2.10 ()
 Linker command line:
 
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
-  -cs -h+dist/default/production\usbcdcdemo.X.production.sym \
-  --cmf=dist/default/production\usbcdcdemo.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\mathe\AppData\Local\Temp\s2t0.2 --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/usbcdcdemo.X.production.map -E1 -ver=XC8 \
-  --acfsm=1493 -ASTACK=0AEh-03FFh -pstack=STACK -ACODE=00h-07FFFh \
-  -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
-  -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-07FFh \
-  -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 -ABANK0=060h-0FFh \
-  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
-  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
-  -ABANK7=0700h-07FFh -ASFR=0F60h-0FFFh \
+  -cs -h+dist/default/production\PIC.X.production.sym \
+  --cmf=dist/default/production\PIC.X.production.cmf -z -Q18F4550 \
+  -oC:\Users\Marius\AppData\Local\Temp\s56s.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/PIC.X.production.map -E1 -ver=XC8 --acfsm=1493 \
+  -ASTACK=0AEh-03FFh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
+  -AABS1=00h-07FFh -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 \
+  -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
+  -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh \
+  -ABANK6=0600h-06FFh -ABANK7=0700h-07FFh -ASFR=0F60h-0FFFh \
   -preset_vec=00h,intcode=08h,intcodelo,powerup,init -pramtop=0800h \
   -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
   -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
@@ -23,8 +22,8 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\mathe\AppData\Local\Temp\s2t0.o \
-  dist/default/production\usbcdcdemo.X.production.o 
+  C:\Users\Marius\AppData\Local\Temp\s56s.o \
+  dist/default/production\PIC.X.production.o 
 
 Object code version is 3.11
 
@@ -36,12 +35,12 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\mathe\AppData\Local\Temp\s2t0.o
+C:\Users\Marius\AppData\Local\Temp\s56s.o
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
-dist/default/production\usbcdcdemo.X.production.o
+dist/default/production\PIC.X.production.o
                 intcode                               8        8        6        4       0
                 temp                                 54       54        1        1       1
                 smallconst                          800      800       AE      400       0

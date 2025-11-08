@@ -194,6 +194,14 @@ class Game:
             elif(self.pipe[-1].x <= WIDTH - 400) :
                 self.pipe.append(Pipe(self.canvas, x=WIDTH, top=self.top_photo, bot=self.bottom_photo, y=self.replay[self.index]))
                 self.index += 1
+    
+    def send_pic_signals(self, score):
+        try:
+            self.reader.send_buzzer_signal()
+            self.reader.send_score(score)
+        except Exception as e:
+            print(f"Erreur PIC: {e}")
+
 
 
     def pipes_move(self) :
@@ -212,6 +220,12 @@ class Game:
                 del(self.pipe[j])
             
                 self.score += 1
+
+                if(MODE == "PIC" and self.reader):
+                    import threading
+                    threading.Thread(target=self.send_pic_signals, args=(self.score,), daemon=True).start()
+
+
                 if(self.score %10 == 0 and self.score != 0) :
                     self.speed += 1
                 self.text = str(self.score)
@@ -286,6 +300,7 @@ class Game:
                 if(self.text_score!= None) :
                     self.canvas.delete(self.text_score.id)
                 self.canvas.delete(self.text_box)
+                #DEBUG
                 self.launch_game()
 
 

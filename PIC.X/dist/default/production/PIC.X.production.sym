@@ -579,9 +579,9 @@ bssCOMRAM 1 54 COMRAM 1 1
 bssBANK0 60 AD BANK0 60 1
 text27 8AE 2A5D CODE 8AE 0
 %locals
-dist/default/production\usbcdcdemo.X.production.o
+dist/default/production\PIC.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-C:\Users\mathe\AppData\Local\Temp\s2t0.s
+C:\Users\Marius\AppData\Local\Temp\s56s.s
 2586 2A2A 0 CODE 0
 2588 2A2A 0 CODE 0
 2591 2A2A 0 CODE 0
@@ -782,7 +782,7 @@ usb_device.c
 1050 18EE 0 CODE 0
 1052 1928 0 CODE 0
 1053 1930 0 CODE 0
-C:\Users\mathe\AppData\Local\Temp\s2t0.s
+C:\Users\Marius\AppData\Local\Temp\s56s.s
 5520 8 0 CODE 0
 main.c
 10 8 0 CODE 0
