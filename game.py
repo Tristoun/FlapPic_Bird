@@ -147,6 +147,8 @@ class Game:
         self.cadre = Bouton(self.canvas, size=(550, 500),path="images/images/carre.png", x=80, y=80)
         self.text_score = Bouton(self.canvas, size=(220, 44), path="images/images/text_score.png", x=200, y=200)
         self.generate_text_score(x=450, y=220)
+        if(MODE == "PIC") :
+            self.text_best_score = self.canvas.create_text(450, 300, text=self.reader.best_score, font=("Ariel", 40, "normal"), fill='white')
         self.bouton_start = Bouton(self.canvas, size=(160, 56), x=WIDTH/2-80, y=HEIGHT/2-14)
         self.state = GameState.MENU
 
@@ -274,8 +276,7 @@ class Game:
     def generate_text_score(self, x=WIDTH//2, y=35) :
         self.canvas.delete(self.text_box)
         self.text_box = self.canvas.create_text(x, y, text=self.text, font=("Ariel", 40, "normal"), fill='white')
-        self.canvas.delete(self.text_best_score)
-        self.text_best_score = self.canvas.create_text(x, y+50, text=self.text_best_score, font=("Ariel", 40, "normal"), fill='white')
+  
 
 
     def launch_game_PIC(self, mode) :
