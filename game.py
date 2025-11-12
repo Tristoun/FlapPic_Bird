@@ -261,6 +261,7 @@ class Game:
                     result = self.pipe[i].check_collision_player(self.player)
                     if(result) :
                         self.state = GameState.STOP
+                        self.reader.send_die()
                         self.death_animation()
 
 
