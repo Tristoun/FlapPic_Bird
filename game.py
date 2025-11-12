@@ -72,6 +72,7 @@ class Game:
 
         self.cadre = None
         self.text_score = None
+        self.text_best_score = None
         self.space_pressed = False
         self.frame_jump = 0
         self.replay = []
@@ -112,6 +113,8 @@ class Game:
         self.pipe = []
         self.canvas.delete(self.player.image)
         self.canvas.delete(self.text_box)
+        self.canvas.delete(self.text_best_score)
+
 
         self.speed = 5
 
@@ -126,6 +129,7 @@ class Game:
             self.score = 0
             self.text = "0"
             self.text_box = None
+            self.text_best_score = None
             self.reset()
             self.player = Bird(self.canvas, path="images/images/dog.png", size=(60,55))
 
@@ -253,7 +257,8 @@ class Game:
             result = self.player.check_collision(height=HEIGHT)
             if result == True :
                 self.state = GameState.STOP
-                self.reader.send_die()
+                if(MODE == "PIC") :
+                    self.reader.send_die()
                 self.death_animation()
 
             if(self.pipe != []) :
@@ -261,13 +266,17 @@ class Game:
                     result = self.pipe[i].check_collision_player(self.player)
                     if(result) :
                         self.state = GameState.STOP
-                        self.reader.send_die()
+                        if(MODE == "PIC") :
+                            self.reader.send_die()
                         self.death_animation()
 
 
     def generate_text_score(self, x=WIDTH//2, y=35) :
         self.canvas.delete(self.text_box)
         self.text_box = self.canvas.create_text(x, y, text=self.text, font=("Ariel", 40, "normal"), fill='white')
+        self.canvas.delete(self.text_best_score)
+        self.text_best_score = self.canvas.create_text(x, y+50, text=self.text_best_score, font=("Ariel", 40, "normal"), fill='white')
+
 
     def launch_game_PIC(self, mode) :
         self.state = GameState.RUN
@@ -282,6 +291,8 @@ class Game:
         if(self.text_score!= None) :
             self.canvas.delete(self.text_score.id)
         self.canvas.delete(self.text_box)
+        self.canvas.delete(self.text_best_score)
+
         self.reader.last_value = 0
         if(self.replay != [] and mode == 1) : #0 pour normal 1 pour replay
             print("Replay")
@@ -307,6 +318,8 @@ class Game:
                 if(self.text_score!= None) :
                     self.canvas.delete(self.text_score.id)
                 self.canvas.delete(self.text_box)
+                self.canvas.delete(self.text_best_score)
+
                 #DEBUG
                 self.launch_game()
 

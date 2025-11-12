@@ -13,6 +13,8 @@ class USBDecoder():
         self.table_buffer = []
         self.table_expected = 0
 
+        self.best_score = 0
+
     def start(self):
         self.running = True
         self.thread = threading.Thread(target=self.read_loop, daemon=True)
@@ -104,7 +106,8 @@ class USBDecoder():
                             print("✅ Tableau complet reçu :", self.table_buffer)
 
                     continue
-
+                if data.startswith("BEST") :
+                    self.best_score = int(data.split(" ")[1])
                 # --- Sinon message normal ---
                 if data.isdigit():
                     self.last_value = int(data)
@@ -114,5 +117,3 @@ class USBDecoder():
 
             else:
                 self.last_value = 0
-
-            time.sleep(0.03)
