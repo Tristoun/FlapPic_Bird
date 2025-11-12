@@ -80,8 +80,10 @@ class Game:
 
     def checkPicPressed(self) :
         if(self.reader.last_value == 1) :
-            return True
-        return False
+            return 1
+        elif self.reader.last_value == 2 :
+            return 2
+        return 0
             
 
     def launch_game(self) :
@@ -129,7 +131,7 @@ class Game:
 
             if(MODE == "PIC") :
                 if(self.checkPicPressed()) :
-                    self.launch_game_PIC()
+                    self.launch_game_PIC(mode=0)
                 else :
                     self.root.after(FPS, self.menu)
             else :
@@ -145,8 +147,10 @@ class Game:
         self.state = GameState.MENU
 
         if(MODE == "PIC") :
-            if(self.checkPicPressed()) :
-                self.launch_game_PIC()
+            if(self.checkPicPressed() == 1) :
+                self.launch_game_PIC(mode=0)
+            elif (self.checkPicPressed() == 2) :
+                self.launch_game_PIC(mode=1)
             else : 
                 self.root.after(FPS, self.scoring)
         else :
@@ -263,7 +267,7 @@ class Game:
         self.canvas.delete(self.text_box)
         self.text_box = self.canvas.create_text(x, y, text=self.text, font=("Ariel", 40, "normal"), fill='white')
 
-    def launch_game_PIC(self) :
+    def launch_game_PIC(self, mode) :
         self.state = GameState.RUN
         self.canvas.delete(self.bouton_start.id)
         self.canvas.delete(self.instruction.id)
@@ -277,12 +281,13 @@ class Game:
             self.canvas.delete(self.text_score.id)
         self.canvas.delete(self.text_box)
         self.reader.last_value = 0
-        if(self.replay != []) :
-            print("DEBUG")
+        if(self.replay != [] and mode == 1) : #0 pour normal 1 pour replay
+            print("Replay")
             self.index = 0
             self.state = GameState.REPLAY
             print(self.replay, self.state)
-
+        else :
+            self.replay = []
         self.launch_game()
 
     def click_menu(self, event) :
