@@ -253,6 +253,7 @@ class Game:
             result = self.player.check_collision(height=HEIGHT)
             if result == True :
                 self.state = GameState.STOP
+                self.reader.send_die()
                 self.death_animation()
 
             if(self.pipe != []) :

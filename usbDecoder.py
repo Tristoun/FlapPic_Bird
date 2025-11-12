@@ -41,6 +41,13 @@ class USBDecoder():
         except Exception as e:
             print(f"Erreur envoi buzzer: {e}")
     
+    def send_die(self) :
+        try:
+            self.ser.write(b'D\n')
+            self.ser.flush()
+        except Exception as e:
+            print(f"Erreur envoi die: {e}")
+    
     def send_score(self, score):
         try:
             msg = f'S{score}\n'
